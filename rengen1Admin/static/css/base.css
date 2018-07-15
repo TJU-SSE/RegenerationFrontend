@@ -1,0 +1,130 @@
+.border{
+  border: 2px solid black;
+}
+
+
+.regen-container{
+  padding: 0 5%;
+}
+
+.regen-tag{
+  font-size: .75em;
+  font-weight: normal;
+}
+
+.regen-tag{
+  position: relative;
+  text-decoration: none;
+  border: none;
+  background: #222222;
+  color: white;
+  padding: 1px 3px;
+  margin-right: 15px;
+
+  letter-spacing: 1px;
+  line-height: 1.4em;
+
+  cursor: pointer;
+}
+
+.regen-tag:hover{
+  border: none;
+  color: #ecf0f1;
+}
+
+.regen-tag:after{
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  right: -8px;
+  top: 0;
+  border-top: 8px solid transparent;
+  border-left: 8px solid #222222;
+  border-bottom: 8px solid transparent;
+}
+
+.wf-item {
+  position: absolute;
+  width: 95%;
+  top: 15px;
+  left: 2.5%;
+  right: 2.5%;
+  bottom: 2.5%;
+  font-size: 1.2em;
+}
+
+.wf-img, .wf-title{
+  cursor: pointer;
+}
+
+.wf-img{
+  width: 100%;
+}
+
+p.wf-title{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.wf-time{
+  font-size: .75em;
+  font-weight: normal;
+}
+
+.wf-desc{
+  font-weight: normal;
+  font-size: .85em;
+  line-height: 1.324em;
+}
+
+#thumb > .swiper-wrapper {
+  display: -webkit-flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+#thumb > .swiper-wrapper > div {
+  width: 40%;
+}
+
+.markdown p img {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.news-wrap {
+  max-width: 300px;
+}
+
+.wf-img {
+  min-width: 220px !important;
+  /*height: 200px !important;*/
+}
+
+/* For iphone5 */
+@media (min-device-width: 320px) and (max-device-width: 568px){
+  .markdown p {
+    font-size: 1.5em !important;
+  }
+
+  .markdown img {
+    width: 100%;
+    margin: 20px auto;
+  }
+}
+
+/* For ipad pro */
+@media (min-device-width: 568px) and (max-device-width: 1100px) {
+  .markdown p {
+    font-size: 1.5em !important;
+  }
+
+  .markdown img {
+    width: 100%;
+    margin: 20px auto;
+  }
+}
+
+
