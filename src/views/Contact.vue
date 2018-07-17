@@ -10,6 +10,18 @@
           <h4>{{w.email}}</h4>
         </div>
       </div>
+      <div class="visitorMessage">
+        <h2>Please leave your contact detail here for cooperation or work opportunity</h2>
+        <div>
+          <h3>Name:</h3>
+          <input style="width:835px; height:40px">
+          <h3>E-mail:</h3>
+          <input style="width:835px; height:40px">
+          <h3>Content:</h3>
+          <textarea style="width:835px; height:140px"></textarea>
+          <button>SUBMIT</button>
+        </div>
+      </div>
     </div>
     <div class="right">
       <h3 style="text-align:center; color: red">| SHANGHAI |</h3>
@@ -229,6 +241,27 @@
 
   .photos h4 {
     font-size: 0.8em;
+  }
+
+  .visitorMessage h2{
+    font-size: 1.8em;
+    color:#c31820
+  }
+
+  .visitorMessage h3{
+    font-size: 1.5em;
+  }
+
+  .visitorMessage button{
+    padding-right: 0px;
+    margin-top: 20px;
+    float: right;
+    height: 50px;
+    width: 150px;
+    font-size: 1.9em;
+    background-color: #2c0206;
+    color: #c3181f;
+    border: none;
   }
 
   /* right */
