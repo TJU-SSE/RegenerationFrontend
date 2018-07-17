@@ -3,7 +3,7 @@
     <div class="left">
       <vue-markdown class="markdown" v-if="contact.desc !== ''" style="font-family: qingkebenyue">{{contact.desc}}</vue-markdown>
       <div class="photos">
-        <div v-for="w in workers">
+        <div v-for="w in workers" v-bind:key="w.id">
           <img :src="w.img_url" alt="" @click="selectWorker = w;uploadPicDialog = true">
           <h2>{{w.name}}</h2>
           <h3>{{w.identity}}</h3>
@@ -12,35 +12,28 @@
       </div>
     </div>
     <div class="right">
-      <h3 style="padding-left: 15px; color: red">SHANGHAI 上海</h3>
-      <div class="contacts">
-        <div>
-          <strong>电话:</strong>
-          <p>{{contact.phone}}</p>
-        </div>
-        <div>
-          <strong>传真:</strong>
-          <p>{{contact.fax}}</p>
-        </div>
-      </div>
-      <div class="location">
-        <p>{{contact.address}}</p>
-      </div>
-      <div class="links">
-        <a :href="contact.link" target="_blank" style="cursor: pointer">{{contact.link}}</a>
-      </div>
+      <h3 style="padding-left: 120px; color: red">| SHANGHAI |</h3>
       <div class="map">
-        <img src="../../static/img/location.png" alt="">
+        <iframe width='400' height='450' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='http://f.amap.com/11jxp_0B95cR5'></iframe>
       </div>
-      <h3 style="padding-left: 15px; color: red">LONDON 伦敦</h3>
       <div class="contacts">
         <div>
-          <strong>电话:</strong>
-          <p>021-63232306(SH)</p>
+          <p>Tel: +86 63232306</p>
         </div>
         <div>
-          <strong>邮箱:</strong>
-          <p>INDO@REGEN.ORG.CN</p>
+          <p>Add:</p>
+        </div>
+        <div>
+          <p>{{contact.address}}</p>
+        </div>
+      </div>
+      <h3 style="padding-left: 130px; color: red">| LONDON |</h3>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d155.1613737864298!2d-0.09867483611529332!3d51.52088464416027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b56bb5bfb43%3A0xfc22c89f43faecfc!2sFlorin+Court!5e0!3m2!1szh-CN!2sus!4v1531817952877" width='400' height='450' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'></iframe>
+      </div>
+      <div class="contacts">
+        <div>
+          <p>Flourin Court, Charterhouse Square, London EC1M 6EX(UK)</p>
         </div>
       </div>
     </div>
@@ -180,7 +173,7 @@
     display: -webkit-flex;
     flex-direction: row;
     width: 90%;
-    height: 700px;
+    height: auto;
     align-items: flex-start;
     margin: 60px auto;
   }
@@ -266,20 +259,27 @@
   .contacts > div > p {
     flex-grow: 1;
     font-size: 1.4em;
-    text-align: right;
-    padding-right: 4%;
+    text-align: left;
+    padding-left: 15px;
   }
 
   .location {
     margin-top: 20px;
     padding-left: 5px;
-    font-size: 1.5em;
+    font-size: 1.0em;
     font-family: 'Helvetica Neue Thin';
   }
 
   .location > p {
-    color: #989FBF;
+    color: #000000;
     text-align: center;
+  }
+
+  .location > strong {
+    flex-grow: 2;
+    font-size: 1.6em;
+    padding-left: 15px;
+    margin-top: 3px;
   }
 
   .links {
