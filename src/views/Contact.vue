@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="right">
-      <h3 style="padding-left: 120px; color: red">| SHANGHAI |</h3>
+      <h3 style="text-align:center; color: red">| SHANGHAI |</h3>
       <div class="map">
         <iframe width='400' height='450' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='http://f.amap.com/11jxp_0B95cR5'></iframe>
       </div>
@@ -27,7 +27,7 @@
           <p>{{contact.address}}</p>
         </div>
       </div>
-      <h3 style="padding-left: 130px; color: red">| LONDON |</h3>
+      <h3 style="text-align:center; color: red">| LONDON |</h3>
       <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d155.1613737864298!2d-0.09867483611529332!3d51.52088464416027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b56bb5bfb43%3A0xfc22c89f43faecfc!2sFlorin+Court!5e0!3m2!1szh-CN!2sus!4v1531817952877" width='400' height='450' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'></iframe>
       </div>
