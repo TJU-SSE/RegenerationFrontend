@@ -23,7 +23,7 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 8002,
+    port: 8080,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
@@ -35,5 +35,6 @@ module.exports = {
     // just be aware of this issue when enabling this option.
     cssSourceMap: false
   },
-  baseUrl: 'http://101.132.77.182:4000/'
+  // baseUrl: 'http://101.132.77.182:4000/'
+  baseUrl: 'http://212.64.17.49:4000/'
 }
