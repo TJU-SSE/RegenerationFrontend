@@ -10,7 +10,7 @@
           <h4>{{w.email}}</h4>
         </div>
       </div>
-      <div class="visitorMessage">
+      <div class="visitorMessage" valign="top">
         <h2>Please leave your contact detail here for cooperation or work opportunity</h2>
         <div>
           <h3>Name:</h3>
@@ -241,6 +241,15 @@
 
   .photos h4 {
     font-size: 0.8em;
+  }
+
+  .visitorMessage{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: flex-end;
   }
 
   .visitorMessage h2{
