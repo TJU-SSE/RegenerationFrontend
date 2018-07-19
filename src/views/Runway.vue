@@ -2,7 +2,7 @@
   <div>
     <div class="sub-header">
       <div>
-        <span>SHOW FINDER</span>
+        <span style="color:#cc141e; font-size: 20px">SHOW FINDER</span>
         <AlphaDropDown :opts="optsAlpha" desc="search designers" class="drop"></AlphaDropDown>
         <DropDown :opts="opts" desc="search Seasons" class="drop"></DropDown>
       </div>
@@ -15,6 +15,7 @@
       <div class="left-pics">
         <div v-for="(n, index) in shows.slice(0, 6)" :key="index">
           <img :src="n.img_url" alt="pic" @click="onImgClick($event, n.id)">
+          <span class="showname">{{n.name}}</span>
         </div>
       </div>
       <div class="right-tabs">
@@ -220,7 +221,7 @@
   .main-container {
     margin: 10px auto;
     width: 100%;
-    /*height: 800px;*/
+    height: 100%;
     display: flex;
     display: -webkit-flex;
     flex-direction: row;
@@ -229,25 +230,26 @@
   }
 
   .left-pics {
-    width: 40%;
+    width: 25%;
     display: flex;
     display: -webkit-flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: space-between;
   }
 
   .left-pics > div {
     display: flex;
     display: -webkit-flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
   }
 
   .left-pics > div > img {
     padding: 3px;
-    width: 160px;
-    height: 240px;
+    padding-bottom: 0px;
+    width: 240px;
+    height: 360px;
     cursor: pointer;
     transition: .5s;
   }
@@ -256,11 +258,19 @@
     transform: scale(1.1, 1.1);
   }
 
+  .showname {
+    width: 174px;
+    color: #cc141e;
+    text-align: center;
+    background-color: #241E26;
+    font-size: 10px;
+  }
+
   /* tabs */
   .right-tabs {
-    width: 40%;
-    height: 60%;
-    background-color: white;
+    width: 20%;
+    height: 80%;
+    background-color: #cc141e;
     border: 1px solid ghostwhite;
     border-top: none;
     display: flex;
@@ -280,19 +290,23 @@
     width: 50%;
     height: 50px;
     text-align: center;
+    font-weight: 900;
     padding: 10px;
-    background-color: #FCFBFE;
+    background-color: black;
+    color: #cc141e;
     border: 1px solid ghostwhite;
   }
 
   .tabs > div.active {
-    background-color: white;
+    background-color: #cc141e;
     border-bottom: white;
+    color: black;
   }
 
   .tab-content {
     overflow-y: auto;
     height: 100%;
+    font-weight: bold;
   }
 
   #latest-shows {
@@ -328,15 +342,18 @@
   .list-item {
     width: 100%;
     letter-spacing: .1em;
-    color: #333;
-    font-family: "Helvetica Neue Thin";
-    font-size: 0.9em;
+    color: black;
+    font-family: "Helvetica Neue";
+    font-size: 1.1em;
+    font-weight: 900;
   }
 
   a {
     color: black;
     padding-left: 2px;
     text-decoration: none !important;
+    font-size: 0.7em;
+    font-weight: bold;
   }
 
   /* 侧边导航栏 */

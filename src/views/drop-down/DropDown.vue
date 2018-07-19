@@ -84,12 +84,13 @@
   .list-header {
     margin: 3px 0;
     font-weight: bold;
+    color:#cc141e;
   }
 
   .list-item {
     width: 100%;
     letter-spacing: .1em;
-    color: #333;
+    color: #cc141e;
     font-family: "FranklinGothic", Helvetica, sans-serif;
   }
 
