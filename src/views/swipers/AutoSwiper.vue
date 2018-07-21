@@ -83,6 +83,16 @@
     background-image: url("../../../static/icon/right-arrow.svg") !important;
   }
 
+  .swiper-containter {
+    font-size: .8em;
+    position: absolute;
+    bottom: -3%;
+    background-color: #000;
+    width: 100%;
+    height: 33%;
+    opacity: .7;
+  }
+
   @media screen and (min-width: 1500px){
     .swiper-wrapper > div{
       height: 900px;

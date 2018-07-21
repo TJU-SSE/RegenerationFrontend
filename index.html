@@ -1,12 +1,112 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href=static/css/base.css>
-  </head>
-  <body>
+    <style>
+        .swiper-containter {}
+        
+        .swiper-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            transition-property: transform;
+            box-sizing: content-box;
+        }
+        
+        .swiper-slide {
+            -webkit-flex-shrink: 0;
+            -ms-flex: 0 0 auto;
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .swiper-container {
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: absolute;
+            top: 50%;
+            width: 27px;
+            height: 44px;
+            margin-top: -22px;
+            z-index: 10;
+            cursor: pointer;
+            background-size: 27px 44px;
+            background-position: 50%;
+            background-repeat: no-repeat;
+        }
+        
+        .swiper-button-prev {
+            background-image: url("../../../static/icon/left-arrow.svg") !important;
+            left: 10px;
+            right: auto;
+        }
+        
+        .swiper-button-next {
+            background-image: url("../../../static/icon/right-arrow.svg") !important;
+            right: 10px;
+            left: auto;
+        }
+        
+        .swiper-container-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+        }
+        
+        .swiper-pagination {
+            position: absolute;
+            text-align: center;
+            transition: .3s;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            z-index: 10;
+        }
+        
+        .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+            margin: 0 5px;
+        }
+        
+        .swiper-pagination-clickable .swiper-pagination-bullet {
+            cursor: pointer;
+        }
+        
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            border-radius: 100%;
+            background: #000;
+            opacity: .2;
+        }
+        
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: #007aff;
+        }
+    </style>
+</head>
+
+<body>
     <div id="app"></div>
     <!-- built files will be auto injected -->
-  </body>
+</body>
+
 </html>
