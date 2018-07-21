@@ -48,6 +48,11 @@
 <style scoped>
   .swiper-container {
     background-color: #FFF;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
   }
 
   .append-buttons {
@@ -65,17 +70,17 @@
 
   .swiper-slide img {
     height: 300px;
-    width: auto !important;
+    /* width: auto !important; */
   }
 
   .text {
-    font-size: 0.8em;
+    font-size: .8em;
     position: absolute;
     bottom: -3%;
-    background-color: black;
+    background-color: #000;
     width: 100%;
     height: 33%;
-    opacity: 0.7;
+    opacity: .7;
   }
 
   .text p {
