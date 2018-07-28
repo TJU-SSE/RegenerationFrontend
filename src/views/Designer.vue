@@ -13,7 +13,7 @@
           <el-row>
            <el-col :span="1"><p></p></el-col> 
            <el-col :span="6"> 
-              <img :src="item.img_url" class="avatar" :border="false"/> 
+              <img :src="item.img_url" class="avatar" :border="false" @click="onImgClick($event,item.id)"/> 
            </el-col>
            <el-col :span="1"><p></p></el-col>   
           </el-row>
