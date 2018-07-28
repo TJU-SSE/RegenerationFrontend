@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="sub-header">
+    <!-- <div class="sub-header">
       <div>
         <span style="color:#cc141e; font-size: 20px">SHOW FINDER</span>
         <AlphaDropDown :opts="optsAlpha" desc="search designers" class="drop"></AlphaDropDown>
         <DropDown :opts="opts" desc="search Seasons" class="drop"></DropDown>
       </div>
-    </div>
+    </div> -->
     <div class="big-title">
       {{config.runway.title}}
     </div>
