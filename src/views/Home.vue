@@ -8,7 +8,7 @@
       </div>
       <div class="center">
         <div class="mag-photo">
-          <div v-for="img in shows.slice(0, 5)">
+          <div v-for="img in shows.slice(0, 3)">
             <img :src="img.img_url" alt="magzine" @click="toShow(img.id)">
           </div>
         </div>
