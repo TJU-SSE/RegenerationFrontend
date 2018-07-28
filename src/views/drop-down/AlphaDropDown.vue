@@ -97,6 +97,7 @@
   .list-header {
     margin: 3px 0;
     font-weight: bold;
+    color: #cc141e;
   }
 
   .list-item {
@@ -104,6 +105,7 @@
     letter-spacing: .1em;
     color: #333;
     font-family: "FranklinGothic", Helvetica, sans-serif;
+    color: #cc141e;
   }
 
   a {
@@ -121,6 +123,7 @@
     font-size: 0.5em;
     right: 10px;
     top: 60px;
+    color: #cc141e;
   }
 
   .nav > li {
