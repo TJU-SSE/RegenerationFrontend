@@ -1,5 +1,6 @@
 <template>
   <div class="designer-container">
+    <DesignerSwiper :imgs="designers.slice(0, 5)"></DesignerSwiper>
     <div class="designer-wrap" v-for="designer in designers">
       <div class="designer-img-wrap">
         <img :src="designer.img_url"  @click="onImgClick($event,designer.id)">
@@ -14,7 +15,7 @@
 
 <script>
   import {getAllDesigners} from '../service/getData'
-
+  import DesignerSwiper from './swipers/DesignerSwiper.vue'
   export default {
     name: 'news',
     data () {
@@ -22,6 +23,9 @@
         title: 'DESIGNER',
         designers: []
       }
+    },
+    components: {
+      DesignerSwiper
     },
     methods: {
       onImgClick (event, designerId) {
