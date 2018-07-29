@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Bernard";
+  src: url('../../src/assets/fonts/Bernard.TTF');
+}
+
+@font-face {
+  font-family: "Tw";
+  src: url('../../src/assets/fonts/Tw.TTF');
+}
+
 .border{
   border: 2px solid black;
 }
