@@ -16,7 +16,7 @@
       <hr>
     </div>
     <div class="seasons-swiper">
-      <div class="center-text">
+      <div class="biography">
         <h2>All Seasons</h2>
       </div>
       <hr>
