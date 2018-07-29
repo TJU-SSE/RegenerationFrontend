@@ -10,16 +10,21 @@
           <h4>{{w.email}}</h4>
         </div>
       </div>
-      <div class="visitorMessage" valign="top">
+      <div class="visitorMessage" valign="right">
         <h2>Please leave your contact detail here for cooperation or work opportunity</h2>
-        <div>
-          <h3>Name:</h3>
-          <input style="width:835px; height:40px">
-          <h3>E-mail:</h3>
-          <input style="width:835px; height:40px">
-          <h3>Content:</h3>
-          <textarea style="width:835px; height:140px"></textarea>
-          <button>SUBMIT</button>
+        <div style="width: 80%">
+          <el-form label-position="top" label-width="80px" :model="contactForm">
+            <el-form-item label="Name:">
+              <el-input v-model="contactForm.name"></el-input>
+            </el-form-item>
+            <el-form-item label="E-mail:">
+              <el-input v-model="contactForm.mail"></el-input>
+            </el-form-item>
+            <el-form-item label="Content:">
+              <el-input type="textarea" v-model="contactForm.content"></el-input>
+            </el-form-item>
+          </el-form>
+          <button @click="submit">SUBMIT</button>
         </div>
       </div>
     </div>
@@ -88,6 +93,11 @@
           email: '',
           identity: '',
           rank: 0
+        },
+        contactForm: {
+          name: '',
+          mail: '',
+          content: ''
         },
         uploadProcess: 0,
         photos: [
@@ -159,6 +169,9 @@
         }).catch(err => {
           console.log(err)
         })
+      },
+      submit (formName) {
+        console.log('这里要提交表单，记得删除log！')
       }
     },
     mounted () {
@@ -250,6 +263,7 @@
     flex-wrap: wrap;
     -webkit-align-content: center;
     align-content: flex-end;
+    font-family: "bernard"
   }
 
   .visitorMessage h2{

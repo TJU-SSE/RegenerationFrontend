@@ -8,7 +8,7 @@ import AwesomeSwiper from 'vue-awesome-swiper'
 import ElementUI from 'element-ui'
 import VueSimplemde from 'vue-simplemde'
 import iView from 'iview'
-import 'element-ui/lib/theme-default/index.css'
+import 'element-ui/lib/theme-chalk/index.css'
 import 'iview/dist/styles/iview.css'
 
 require('../node_modules/bootstrap/dist/css/bootstrap.min.css')

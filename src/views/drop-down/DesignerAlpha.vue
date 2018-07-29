@@ -52,7 +52,7 @@
   }
 
   ul {
-    background-color: white;
+    background-color: #cc141e;
   }
 
   i {

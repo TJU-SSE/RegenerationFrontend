@@ -3,8 +3,8 @@
     <!-- <div class="sub-header">
       <div>
         <span style="color:#cc141e; font-size: 20px">SHOW FINDER</span>
-        <AlphaDropDown :opts="optsAlpha" desc="search designers" class="drop"></AlphaDropDown>
-        <DropDown :opts="opts" desc="search Seasons" class="drop"></DropDown>
+        <AlphaDropDown :opts="optsAlpha" desc="SEARCH DESIGNERS" class="drop"></AlphaDropDown>
+        <DropDown :opts="opts" desc="SEARCH SEASONS" class="drop"></DropDown>
       </div>
     </div> -->
     <div class="big-title">
@@ -230,7 +230,7 @@
   }
 
   .left-pics {
-    width: 25%;
+    width: 550px;
     display: flex;
     display: -webkit-flex;
     flex-direction: row;
@@ -243,32 +243,36 @@
     display: -webkit-flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 9px;
   }
 
   .left-pics > div > img {
-    padding: 3px;
+    padding: 6px;
     padding-bottom: 0px;
-    width: 240px;
-    height: 360px;
+    width: 240px !important;
+    height: 360px !important;
     cursor: pointer;
     transition: .5s;
+    border: 0px solid black !important;
   }
 
-  .left-pics > div > img:hover {
+  /* .left-pics > div > img:hover {
     transform: scale(1.1, 1.1);
-  }
+  } */
 
   .showname {
-    width: 174px;
+    width: 228px;
+    height: 40px;
     color: #cc141e;
     text-align: center;
     background-color: #241E26;
-    font-size: 10px;
+    font-size: 12px;
+    line-height: 40px;
   }
 
   /* tabs */
   .right-tabs {
-    width: 20%;
+    width: 12%;
     height: 80%;
     background-color: #cc141e;
     border: 1px solid ghostwhite;
@@ -294,7 +298,7 @@
     padding: 10px;
     background-color: black;
     color: #cc141e;
-    border: 1px solid ghostwhite;
+    border: 0px solid ghostwhite;
   }
 
   .tabs > div.active {

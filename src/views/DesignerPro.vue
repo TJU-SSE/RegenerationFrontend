@@ -1,13 +1,63 @@
 <template>
-  <div class="main-container">
+  <el-container>
+    <el-header height="150px">{{designer.name}}</el-header>
+    <el-container>
+      <el-aside width="35%">
+        <div class="left">
+          <div class="detail">
+            <img :src="designer.img_url" alt="photo">
+            <p></p>
+            <div class="ranking">
+            </div>
+            <div class="agency" align="left">
+              <p>E-mail:{{designer.mail}}</p>
+              <p>Fax:{{designer.fax}}</p>
+              <p>Tel:{{designer.tel}}</p>
+              <p>Link:{{designer.link}}</p>
+            </div>
+          </div>
+        </div>
+      </el-aside>
+      <el-main>
+        <div class="right">
+          <el-tabs type="border-card" :stretch="true" class="content">
+            <el-tab-pane label="PROFILE">
+              <transition name="slide-fade">
+                <bioItem :designer="designer"></bioItem>
+              </transition>
+            </el-tab-pane>
+            <el-tab-pane label="YIRENHEZUO">
+              <transition name="slide-fade">
+                <yirenhezuo/>
+              </transition>
+            </el-tab-pane>
+            <el-tab-pane label="KUAIJIEHEZUO">
+              <transition name="slide-fade">
+                <outer :designer="designer"></outer>
+              </transition>
+            </el-tab-pane>
+            <el-tab-pane label="WORK">
+              <transition name="slide-fade">
+                <outlook :designer="designer"></outlook>
+              </transition>
+            </el-tab-pane>
+          </el-tabs>
+          <div class="pages">            
+          </div>
+        </div>
+      </el-main>
+    </el-container>
+  </el-container>
+  <!-- <div class="main-container">
+    <div class="top">
+      <h1>{{designer.name}}</h1>
+    </div>
     <div class="left">
       <h1>{{designer.name}}</h1>
       <div class="detail">
         <img :src="designer.img_url" alt="photo">
         <p></p>
         <div class="ranking">
-          <!--<h4>首页图片的排名</h4>-->
-          <!--<p>{{designer.rank}}</p>-->
         </div>
         <div class="agency">
           <h4>社交</h4>
@@ -45,7 +95,7 @@
         </transition>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -54,6 +104,7 @@
   import outer from './DesignerProCooperation.vue'
   import outlook from './DesignerProOutlook.vue'
   import {getDesignerById} from '../service/getData'
+  import yirenhezuo from './yirenhezuo.vue'
 
   export default {
     data () {
@@ -71,7 +122,11 @@
           rank: '',
           social: '',
           viewcount: '',
-          first: ''
+          first: '',
+          mail: '12345@gmail.com',
+          fax: '12345678',
+          tel: '12345678',
+          link: 'StevenLee.uk'
         },
         editDialog: false,
         deleteDialog: false
@@ -81,7 +136,8 @@
       bioItem,
       branding,
       outer,
-      outlook
+      outlook,
+      yirenhezuo
     },
     methods: {
       toSocialSite (url) {
@@ -114,6 +170,33 @@
     /*src: url('../../static/fonts/Arial.ttf');*/
     /*!*url('../../static/fonts/Arial.ttf');*!*/
   /*}*/
+  .el-header, .el-footer {
+    background-color: white;
+    color: #333;
+    text-align: center;
+    line-height: 110px;
+    font-size: 48px;
+  }
+  
+  .el-aside {
+    background-color: white;
+    color: #333;
+    text-align: center;
+    line-height: 20px;
+    padding-left: 6%;
+  }
+  
+  .el-main {
+    background-color: white;
+    color: #333;
+    text-align: left;
+    line-height: 30px;
+    padding-left: 6%;
+  }
+  
+  body > .el-container {
+    margin-bottom: 40px;
+  }
 
   .slide-fade-enter-active {
     transition: all .3s ease;
@@ -136,19 +219,26 @@
     font-family: "Lantinghei SC";
   }
 
+  .top {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    align-items: column;
+    width: 100%
+  }
+
+  .content {
+    background-color: #d61518;
+    color: black;
+  }
+
   /* left */
   .left {
     display: flex;
     display: -webkit-flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
-  }
-
-  .left h1 {
-    align-self: flex-start;
-    margin-left: 15px;
-    font-family: Arial;
+    width: 80%
   }
 
   .detail {
@@ -159,6 +249,7 @@
     display: -webkit-flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 50px;
   }
 
   .detail img {
@@ -168,17 +259,17 @@
 
   .ranking, .agency {
     align-self: flex-start;
-    margin-left: 10px;
+    align-items: left;
+    margin-left: 10%;
+    font-size: 14px
   }
 
   /* right */
   .right {
-    display: flex;
-    display: -webkit-flex;
     flex-direction: column;
     align-items: center;
-    width: 60%;
-    margin-top: 65px;
+    min-width: 60%;
+    max-width: 80%
   }
 
   .tabs {
@@ -253,5 +344,19 @@
     .left h1 {
       margin-left: -40px;
     }
+  }
+</style>
+
+<style>
+  .el-tabs__item {
+    background-color: black;
+  }
+  .el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active {
+    color: black !important;
+    background-color: #d61518 !important;
+    border-left-color: #d61518 !important;
+  }
+  .el-tabs--border-card>.el-tabs__header .el-tabs__item {
+    color: #d61518 !important;
   }
 </style>
