@@ -22,7 +22,7 @@
           </el-row>
           <el-row><p></p></el-row>
           <el-row><p></p></el-row>
-          <el-row><p>{{item.name}}</p></el-row>
+          <el-row><p class="dname">{{item.name}}</p></el-row>
           <el-row><p></p></el-row>
           <el-row><p></p></el-row>
         </div>        
@@ -127,7 +127,7 @@
   .follower {
     text-align: center;
     font-size: 12px;
-    margin: 5px;
+    margin: 3px;
   }  
   .avatar {
     width: 250px;
@@ -142,6 +142,7 @@
     border-radius: 50%;
   }
   .dname{
-    align-items: center;
+    font-size: 15px;
+    font-weight: bolder;
   }
 </style>
