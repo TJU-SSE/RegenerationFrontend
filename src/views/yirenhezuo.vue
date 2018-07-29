@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <el-collapse v-model="activeNames" @change="handleChange">
         <el-collapse-item :title="length">
             <div class="imgList">
@@ -69,6 +69,21 @@
 </script>
 
 <style scoped>
+
+  @font-face {
+    font-family: 'Bernard';
+    src: url(../assets/fonts/Bernard.ttf);
+  }
+
+  @font-face {
+    font-family: 'Tw';
+    src: url(../assets/fonts/Tw.ttf);
+  }
+
+  .main {
+    font-family: 'Tw';
+  }
+
   .imgAbr {
     width: 60%;
     height: 100%;

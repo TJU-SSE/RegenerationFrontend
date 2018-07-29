@@ -200,6 +200,16 @@
     src: url(../assets/fonts/HelveticaNeueLt.ttf);
   }
 
+  @font-face {
+    font-family: 'Bernard';
+    src: url(../assets/fonts/Bernard.ttf);
+  }
+
+  @font-face {
+    font-family: 'Tw';
+    src: url(../assets/fonts/Tw.ttf);
+  }
+
   /* sub header */
   .sub-header {
     background-color: #241E26;
@@ -236,7 +246,7 @@
     margin-bottom: 30px;
     font-size: 2.5em;
     text-align: center;
-    font-family: 'DIN Condensed Bold';
+    font-family: Bernard;
   }
 
   /* main container */
@@ -249,6 +259,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
+    font-family: Bernard;
   }
 
   .left-pics {
@@ -369,7 +380,7 @@
     width: 100%;
     letter-spacing: .1em;
     color: black;
-    font-family: "Helvetica Neue";
+    font-family: Bernard;
     font-size: 1.1em;
     font-weight: 900;
   }
