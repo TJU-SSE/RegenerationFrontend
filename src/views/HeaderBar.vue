@@ -1,7 +1,8 @@
 <template>
+  <div>
   <header class="header">
     <router-link :to="{ name: 'Home' }" class="brand">
-      <img src="../../static/img/菜单栏logo.png">
+      <img class="big-title" src="../../static/img/regeneration主页logo-01.png">
     </router-link>
     <ul class="header-list">
       <router-link tag="li" :to="{ name: 'Home'}" :active-class="activeClass" exact>HOME</router-link>
@@ -10,7 +11,7 @@
       <router-link tag="li" :to="{ name: 'news'}" :active-class="activeClass" exact>NEWS</router-link>
       <router-link tag="li" :to="{ name: 'contact'}" :active-class="activeClass" exact>ABOUT US</router-link>
     </ul>
-    <a class="header-search">
+    <!-- <a class="header-search">
       <i class="fa fa-search fa-lg" aria-hidden="true"></i>
     </a>
     <Select
@@ -31,12 +32,24 @@
       <OptionGroup label="News" v-if="resShow">
         <Option v-for="item in searchNews" :value="item.value" :key="item.value">{{ item.label }}</Option>
       </OptionGroup>
-    </Select>
+    </Select> -->
   </header>
+  <div>
+      <div class="sub-header">
+      <div>
+        <span style="color:#cc141e; font-size: 20px">SHOW FINDER</span>
+        <AlphaDropDown :opts="optsAlpha" desc="search designers" class="drop"></AlphaDropDown>
+        <DropDown :opts="opts" desc="search Seasons" class="drop"></DropDown>
+      </div>
+    </div>
+  </div>
+  </div>
 </template>
 
 <script>
-  import {getAllDesigners, getAllNews, getAllShows} from '../service/getData'
+  import DropDown from './drop-down/DropDown.vue'
+  import AlphaDropDown from './drop-down/AlphaDropDown.vue'
+  import {getAllDesigners, getAllNews, getAllShows, getSeasons, getAllBySeason, getAllByFirstName} from '../service/getData'
 
   export default {
     data () {
@@ -54,8 +67,24 @@
         searchNews: [],
         msg: 'This is news page',
         curPathName: '',
-        activeClass: 'active'
+        activeClass: 'active',
+        opts: [
+          {
+            head: '',
+            items: [
+              {
+                id: -1,
+                name: ''
+              }
+            ]
+          }
+        ],
+        optsAlpha: []
       }
+    },
+    components: {
+      DropDown,
+      AlphaDropDown
     },
     methods: {
       turnTo (value) {
@@ -132,6 +161,34 @@
         }).catch(err => {
           console.log(err)
         })
+        getSeasons().then(res => {
+          console.log('seasons', res)
+          for (let season of res.msg) {
+            getAllBySeason(season.year, season.season).then(res => {
+              console.log('shows by season', res)
+              this.opts.push({
+                head: season.season === '1' ? (Number.parseInt(season.year) + 1) + ' SS' : season.year + ' AW',
+                items: res.msg.shows
+              })
+            }).catch(err => {
+              console.error(err)
+            })
+          }
+        }).catch(err => {
+          console.error(err)
+        })
+        getAllByFirstName().then(res => {
+          Object.keys(res.msg).forEach(key => {
+            if (key !== 'a') {
+              this.optsAlpha.push({
+                head: key,
+                items: res.msg[key]
+              })
+            }
+          })
+        }).catch(err => {
+          console.log(err)
+        })
       }
     },
     mounted () {
@@ -154,10 +211,15 @@
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    height: 55px;
-    background: linear-gradient(20deg, #43485A, #222222);
+    height: 200px;
+    background: url('../../static/img/homeheader.jpg');
   }
-
+  .big-title {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    /* justify-content: left; */
+  }
   .header a{
     text-decoration: none;
   }
@@ -207,6 +269,35 @@
 
   .header .header-list li:hover a, .header .header-search:hover, .header .header-list li:hover{
     color: #d2d7d3;
+  }
+  /* sub header */
+  .sub-header {
+    background-color: #241E26;
+    height: 60px;
+  }
+
+  .sub-header > div {
+    position: relative;
+    width: 60%;
+    left: 40%;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .sub-header > div > span {
+    color: white;
+    position: relative;
+    top: 20px;
+    margin-right: 20px;
+  }
+
+  .drop {
+    position: relative;
+    top: 10px;
+    margin-right: 10px;
+    font-size: 0.8em;
   }
 
   @media (min-device-width: 320px) and (max-device-width: 568px){
