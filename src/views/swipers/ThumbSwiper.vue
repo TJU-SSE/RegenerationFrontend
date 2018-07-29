@@ -1,10 +1,6 @@
 <template>
   <div>
-    <div style="height: 700px">
-      <!-- swiper2 Thumbs -->
-      <swiper :options="swiperOptionThumbs" class="gallery-thumbs" ref="swiperThumbs" id="thumb">
-        <swiper-slide :style="{'background-image': 'url(' + img.img_url + ')'}" v-for="(img, index) in imgs" :key="index"></swiper-slide>
-      </swiper>
+    <div style="height: 555px">
       <!-- swiper1 -->
       <swiper :options="swiperOptionTop" class="gallery-top" ref="swiperTop">
         <swiper-slide :style="{'background-image': 'url(' + img.img_url + ')'}" v-for="(img, index) in imgs" :key="index">
@@ -19,6 +15,12 @@
         <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
       </swiper>
     </div>
+    <div>
+      <swiper :options="swiperOptionThumbs" class="gallery-thumbs" ref="swiperThumbs">
+        <swiper-slide :style="{'background-image': 'url(' + img.img_url + ')'}" v-for="(img, index) in imgs" :key="index">
+        </swiper-slide>
+      </swiper>
+    </div>
   </div>
 </template>
 
@@ -30,16 +32,17 @@
           notNextTick: true,
           nextButton: '.swiper-button-next',
           prevButton: '.swiper-button-prev',
-          spaceBetween: 10
+          spaceBetween: 10,
+          slidesPerView: 1
         },
         swiperOptionThumbs: {
           notNextTick: true,
-          spaceBetween: 10,
           centeredSlides: true,
+          spaceBetween: 10,
           slidesPerView: 'auto',
           touchRatio: 0.2,
           slideToClickedSlide: true,
-          direction: 'vertical'
+          direction: 'horizontal'
         }
       }
     },
@@ -48,7 +51,9 @@
       const swiperTop = this.$refs.swiperTop.swiper
       const swiperThumbs = this.$refs.swiperThumbs.swiper
       swiperTop.params.control = swiperThumbs
+      console.log(swiperThumbs)
       swiperThumbs.params.control = swiperTop
+      console.log(swiperTop)
     }
   }
 </script>
@@ -77,15 +82,15 @@
 
   .gallery-top {
     height: 100%!important;
-    width: 80%;
-    float: left;
+    width: 100%;
+    float: right;
   }
   .gallery-thumbs {
     height: 100%!important;
-    width: 20%;
+    width: 100%;
     box-sizing: border-box;
     padding: 10px 0;
-    float: left;
+    float: right;
   }
   .gallery-thumbs .swiper-slide {
     width: 25%;
