@@ -13,18 +13,18 @@
       <div class="visitorMessage" valign="right">
         <h2>Please leave your contact detail here for cooperation or work opportunity</h2>
         <div style="width: 80%">
-          <el-form label-position="top" label-width="80px" :model="contactForm">
+          <el-form label-position="top" label-width="80px" :model="contactForm" ref="contactForm">
             <el-form-item label="Name:">
               <el-input v-model="contactForm.name"></el-input>
             </el-form-item>
-            <el-form-item label="E-mail:">
+            <el-form-item label="E-mail:" prop="mail">
               <el-input v-model="contactForm.mail"></el-input>
             </el-form-item>
             <el-form-item label="Content:">
               <el-input type="textarea" v-model="contactForm.content"></el-input>
             </el-form-item>
           </el-form>
-          <button @click="submit">SUBMIT</button>
+          <button @click="submit('contactForm')">SUBMIT</button>
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@
 <script>
 
   import VueMarkdown from '../../node_modules/vue-markdown'
-  import {getAllWorkers, getContact} from '../service/getData'
+  import {getAllWorkers, getContact, sendContact} from '../service/getData'
   require('../../node_modules/github-markdown-css/github-markdown.css')
 
   export default {
@@ -171,7 +171,18 @@
         })
       },
       submit (formName) {
-        console.log('这里要提交表单，记得删除log！')
+        const {name: varificationCode, mail: email, content} = this.contactForm
+        sendContact(
+          {
+            varificationCode,
+            email,
+            content
+          }
+        ).then(res => {
+          console.log(res)
+        }).catch(err => {
+          console.log(err)
+        })
       }
     },
     mounted () {
