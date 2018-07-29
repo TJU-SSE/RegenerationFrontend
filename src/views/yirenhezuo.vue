@@ -68,32 +68,7 @@
   }
 </script>
 
-<style>
-  .el-collapse-item__header {
-    background-color: #d61518 !important;
-    color: white;
-    text-align: center;
-    border-bottom: 1px solid black !important;
-  }
-
-  .el-collapse {
-    border: 1px solid black !important;
-  }
-
-  .el-collapse-item__content {
-    background-color: black;
-    color: white;
-    border: 0px solid black !important;
-  }
-
-  .el-collapse-item__wrap {
-    border: 0px !important;
-  }
-
-  .el-collapse-item__arrow {
-    float: unset !important;
-  }
-
+<style scoped>
   .imgAbr {
     width: 60%;
     height: 100%;
@@ -122,4 +97,31 @@
     line-height: 5px;
   }
 
+</style>
+
+<style>
+  .el-collapse-item__header {
+    background-color: #d61518 !important;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid black !important;
+  }
+
+  .el-collapse {
+    border: 1px solid black !important;
+  }
+
+  .el-collapse-item__content {
+    background-color: black;
+    color: white;
+    border: 0px solid black !important;
+  }
+
+  .el-collapse-item__wrap {
+    border: 0px !important;
+  }
+
+  .el-collapse-item__arrow {
+    float: unset !important;
+  }
 </style>
