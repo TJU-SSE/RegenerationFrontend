@@ -2,13 +2,13 @@
   <div class="designer-container">
     <el-row><p></p></el-row>
     <el-row><p></p></el-row>
-    
+    <div>
     <DesignerSwiper :imgs="designers.slice(0, 5)"></DesignerSwiper>
+    
       <el-col :span="2"><p></p></el-col> 
       <el-col :span="20">
       <div class="followers">
-        
-        
+   
         <div v-for="(item, index) in designers" :key="index" class="follower">
           <el-row><p></p></el-row>
           <el-row><p></p></el-row>
@@ -29,7 +29,7 @@
       </div>
       </el-col>   
       <el-col :span="2"><p></p></el-col> 
-
+    </div>
     <!-- <div class="designer-wrap" v-for="designer in designers">
       <div class="designer-img-wrap">
         <img :src="designer.img_url"  @click="onImgClick($event,designer.id)">
@@ -78,6 +78,7 @@
 <style scoped>
   .designer-container {
     width: 70%;
+    /* height: 100%; */
     margin: 0 auto;
   }
 

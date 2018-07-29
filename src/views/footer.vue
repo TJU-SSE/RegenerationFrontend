@@ -1,6 +1,6 @@
 <template>
   <div class="my-footer">
-    <el-row>
+    <!-- <el-row> -->
       <el-col :span="12">
         <div class="makecenter">
           <el-col :span="4"><p> </p></el-col>
@@ -73,7 +73,7 @@
           <!-- </el-col> -->
           <!-- <el-col :span="4"><p> </p></el-col> -->
         </el-col>
-    </el-row>
+    <!-- </el-row> -->
     <!-- <img src="../../static/img/regeneration主页logo-01.png" alt="logo">
     <p class="first-line">RENGERATION.CN © REGEN. INC. ALL RIGHTS RESERVED.</p>
     <p class="second-line">REGENERATION IS OPERATED BY REGEN INC.</p> -->
@@ -98,12 +98,13 @@
   }
 
   .my-footer {
-    height: 450px;
+    height: 350px;
     width: 100%;
     background: url('../../static/img/footer.jpg');
-    /* display: flex;
-    display: -webkit-flex; */
+    display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    justify-content: space-around;
     /* align-items: center; */
   }
 
@@ -128,7 +129,7 @@
   .contract{
     background: rgb(53, 1, 1);
     width: 400px;
-    height: 350px;
+    height: 250px;
     /* align-items: center;
     justify-content: center; */
   }
@@ -171,5 +172,11 @@
   .browndiv{
     color: #673A1B;
     background:#673A1B;
+  }
+  .makecenter{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 </style>
