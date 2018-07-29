@@ -243,10 +243,11 @@
     display: -webkit-flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 9px;
   }
 
   .left-pics > div > img {
-    padding: 3px;
+    padding: 6px;
     padding-bottom: 0px;
     width: 240px !important;
     height: 360px !important;
@@ -260,7 +261,7 @@
   } */
 
   .showname {
-    width: 234px;
+    width: 228px;
     height: 40px;
     color: #cc141e;
     text-align: center;
@@ -271,7 +272,7 @@
 
   /* tabs */
   .right-tabs {
-    width: 20%;
+    width: 12%;
     height: 80%;
     background-color: #cc141e;
     border: 1px solid ghostwhite;
