@@ -15,14 +15,14 @@
                   <el-row><p> </p></el-row>
                   <el-row><p> </p></el-row>
                   <el-row><p> </p></el-row>
-                  <el-row><p>Tel:+86 63232306</p></el-row>
-                  <el-row><p> </p></el-row>
-                  <el-row><p>Add:</p></el-row>
-                  <el-row><p>Bldg7, No.224 NanchangRd.,</p></el-row>
-                  <el-row><p>Huangpu District, Shanghai</p></el-row>
-                  <el-row><p></p></el-row>
-                  <el-row><p>Flourin Court, Charterhouse</p></el-row>
-                  <el-row><p>Suqare, London EC1M 6EX(UK)</p></el-row>
+                  <el-row><p class="info">Tel:+86 63232306</p></el-row>
+                  <el-row><p class="info"> </p></el-row>
+                  <el-row><p class="info">Add:</p></el-row>
+                  <el-row><p class="info">Bldg7, No.224 NanchangRd.,</p></el-row>
+                  <el-row><p class="info">Huangpu District, Shanghai</p></el-row>
+                  <el-row><p class="info"></p></el-row>
+                  <el-row><p class="info">Flourin Court, Charterhouse</p></el-row>
+                  <el-row><p class="info">Suqare, London EC1M 6EX(UK)</p></el-row>
                   </el-col>
                   <el-col :span="4"><p> </p></el-col>
                 </div>
@@ -178,5 +178,9 @@
     display: -webkit-flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+  .info {
+    font-size: 15px;
+    font-weight: bolder;
   }
 </style>
