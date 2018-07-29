@@ -3,8 +3,8 @@
     <div class="sub-header">
       <div>
         <span style="color:#cc141e; font-size: 20px">SHOW FINDER</span>
-        <AlphaDropDown :opts="optsAlpha" desc="search designers" class="drop"></AlphaDropDown>
-        <DropDown :opts="opts" desc="search Seasons" class="drop"></DropDown>
+        <AlphaDropDown :opts="optsAlpha" desc="SEARCH DESIGNERS" class="drop"></AlphaDropDown>
+        <DropDown :opts="opts" desc="SEARCH SEASONS" class="drop"></DropDown>
       </div>
     </div>
     <div class="big-title">
@@ -261,10 +261,12 @@
 
   .showname {
     width: 234px;
+    height: 40px;
     color: #cc141e;
     text-align: center;
     background-color: #241E26;
-    font-size: 10px;
+    font-size: 12px;
+    line-height: 40px;
   }
 
   /* tabs */
