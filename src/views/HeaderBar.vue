@@ -42,8 +42,8 @@
       <div class="sub-header">
       <div>
         <span style="color:#cc141e; font-size: 20px">SHOW FINDER</span>
-        <AlphaDropDown :opts="optsAlpha" desc="search designers" class="drop"></AlphaDropDown>
-        <DropDown :opts="opts" desc="search Seasons" class="drop"></DropDown>
+        <AlphaDropDown :opts="optsAlpha" desc="SEARCH DESIGNERS" class="drop"></AlphaDropDown>
+        <DropDown :opts="opts" desc="SEARCH SEASONS" class="drop"></DropDown>
       </div>
     </div>
   </div>
@@ -282,7 +282,7 @@
   }
   /* sub header */
   .sub-header {
-    background-color: #241E26;
+    background-color: #2a0910;
     height: 60px;
     position: relative;
     z-index:5;

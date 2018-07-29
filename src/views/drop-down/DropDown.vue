@@ -39,6 +39,7 @@
     background-color: white;
     width: 25%;
     height: 40px;
+    text-align: center;
   }
 
   a {
@@ -47,10 +48,12 @@
 
   button {
     padding: 4px;
+    padding-top: 10px;
     border: none;
     width: 90%;
     background-color: white;
     font-size: 1.5em;
+
   }
 
   ul {

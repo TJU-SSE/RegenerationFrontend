@@ -157,6 +157,8 @@ var getContact = () => fetch('GET', 'admin/contact/get')
 
 var updateContact = (data) => fetch('POST', 'admin/contact/update', data)
 
+var sendContact = (data) => fetch('POST', 'message/create', data)
+
 // News
 var newsCreate = (data) => fetch('POST', 'admin/news/create', data, 'upload')
 
@@ -268,6 +270,7 @@ export {
     uploadImg,
     getContact,
     updateContact,
+    sendContact,
     getAllJsons,
     setJson,
     getSeasons,
