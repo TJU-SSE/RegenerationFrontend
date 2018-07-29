@@ -48,8 +48,7 @@
                       <el-row>
                         <div class="regname">
                           <el-col :span="7"><p class="pfollow">Follow</p></el-col>
-                          <el-col :span="1"><p></p></el-col>
-                          <el-col :span="16"><div class="reglogo brand"><img src="../../static/img/regeneration主页logo-01.png" alt="logo"></div></el-col>            
+                          <el-col :span="16"><div class="reglogo brand">REGENERATION</div></el-col>            
                         </div>
                       </el-row>
                       <el-row><p></p></el-row>
@@ -124,7 +123,8 @@
   .my-footer p {
     color: white;
     /* font-size: 1.3em; */
-    font-family: 'qingkebenyue';
+    font-family: 'Bernard';
+    letter-spacing: 2px;
   }
   .contract{
     background: rgb(53, 1, 1);
@@ -146,6 +146,10 @@
     display: flex;
     height: 30px;
     justify-content: space-between;
+    font-family: Bernard;
+    color: #e60013;
+    font-size: 30px;
+    letter-spacing: 5px;
   }
   .brand img {
     width: 100%;
@@ -153,7 +157,6 @@
   }
   .pfollow{
     font-size: 28px;
-    font-weight: bolder;
     /* width: 30px;
     height: 30px; */
   }
@@ -181,6 +184,9 @@
   }
   .info {
     font-size: 15px;
-    font-weight: bolder;
+    font-family: Bernard;
+  }
+  .reglogo brand {
+    font-size: 28px;
   }
 </style>
