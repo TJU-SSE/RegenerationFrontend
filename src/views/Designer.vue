@@ -1,5 +1,8 @@
 <template>
   <div class="designer-container">
+    <el-row><p></p></el-row>
+    <el-row><p></p></el-row>
+    
     <DesignerSwiper :imgs="designers.slice(0, 5)"></DesignerSwiper>
       <el-col :span="2"><p></p></el-col> 
       <el-col :span="20">
