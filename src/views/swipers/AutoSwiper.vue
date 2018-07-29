@@ -6,7 +6,7 @@
         <swiper-slide v-for="(item, index) in imgs" :style="{'background-image': 'url('+ item.cover_img.toString() +')','cursor': 'pointer', 'background-size': 'cover'}" :key="index">
           <div style="height: 100%; width: 100%" @click="toShow(item)"></div>
           <div class="text" data-swiper-parallax="-300">
-            <div style="font-family: Helvetica Neue Thin">
+            <div style="font-family: Bernard">
               <h1>{{item.title}}</h1>
               <p>{{item.writer}}</p>
             </div>

@@ -161,6 +161,16 @@
     src: url(../assets/fonts/HelveticaNeueLt.ttf);
   }
 
+  @font-face {
+    font-family: 'Bernard';
+    src: url(../assets/fonts/Bernard.ttf);
+  }
+
+  @font-face {
+    font-family: 'Tw';
+    src: url(../assets/fonts/Tw.ttf);
+  }
+
   /* header */
   .header {
     height: 300px;
@@ -168,8 +178,11 @@
     background: url('../../static/img/homeheader.jpg');
   }
   .sub-header {
-    background-color: #241E26;
+    background-color: #2a0910;
     height: 60px;
+    font-family: 'Tw';
+    font-size: 21px;
+    letter-spacing: 2px;
   }
   .social-icon > img {
     padding: 10px;
@@ -206,7 +219,6 @@
     align-items: center;
     width: 85%;
     margin: 0 auto;
-    font-family: "Helvetica Neue Thin";
   }
 
   .navigation > a {
