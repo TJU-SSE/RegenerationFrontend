@@ -244,9 +244,10 @@
   .big-title {
     margin-top: 20px;
     margin-bottom: 30px;
-    font-size: 2.5em;
+    font-size: 5em;
     text-align: center;
     font-family: Bernard;
+    letter-spacing: 2px;
   }
 
   /* main container */

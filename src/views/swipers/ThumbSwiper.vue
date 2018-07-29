@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="height: 555px">
+    <div style="height: 555px">  
       <!-- swiper1 -->
       <swiper :options="swiperOptionTop" class="gallery-top" ref="swiperTop">
         <swiper-slide :style="{'background-image': 'url(' + img.img_url + ')'}" v-for="(img, index) in imgs" :key="index">

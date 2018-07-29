@@ -9,9 +9,8 @@
             <p>{{ slide.desc }}</p>
           </div>
         </swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
+        <div class="swiper-button-next swiper-button-red" slot="button-next"></div>
+        <div class="swiper-button-prev swiper-button-red" slot="button-prev"></div>
       </swiper>
     </div>
   </div>
@@ -25,7 +24,7 @@
           pagination: '.swiper-pagination',
           nextButton: '.swiper-button-next',
           prevButton: '.swiper-button-prev',
-          slidesPerView: 3,
+          slidesPerView: 'auto',
           centeredSlides: true,
           paginationClickable: true,
           spaceBetween: 30

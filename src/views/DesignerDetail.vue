@@ -1,5 +1,9 @@
 <template>
   <div class="main-container">
+    <div class="big-title">
+      {{show.designer.name}}
+    </div>
+
     <div class="designer-show">
       <div class="thumb-swiper">
         <thumbSwiper :designer="show" :imgs="show.imgs" :year="year" :season="season"></thumbSwiper>
@@ -16,7 +20,7 @@
       <hr>
     </div>
     <div class="seasons-swiper">
-      <div class="center-text">
+      <div class="biography">
         <h2>All Seasons</h2>
       </div>
       <hr>
@@ -134,6 +138,14 @@
     align-items: center;
     width: 100%;
   }
+    .big-title {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 5em;
+    text-align: center;
+    font-family: Bernard;
+  }
+
 
   .designer-show {
     width: 100%;
