@@ -1,9 +1,12 @@
 <template>
   <div>
   <header class="header">
+    <el-col :span="12">
     <router-link :to="{ name: 'Home' }" class="brand">
       <img class="big-title" src="../../static/img/regeneration主页logo-01.png">
     </router-link>
+    </el-col>
+    <el-col :span="12">
     <ul class="header-list">
       <router-link tag="li" :to="{ name: 'Home'}" :active-class="activeClass" exact>HOME</router-link>
       <router-link tag="li" :to="{ name: 'runway'}" :active-class="activeClass" exact>RUNWAY</router-link>
@@ -11,6 +14,7 @@
       <router-link tag="li" :to="{ name: 'news'}" :active-class="activeClass" exact>NEWS</router-link>
       <router-link tag="li" :to="{ name: 'contact'}" :active-class="activeClass" exact>ABOUT US</router-link>
     </ul>
+    </el-col>
     <!-- <a class="header-search">
       <i class="fa fa-search fa-lg" aria-hidden="true"></i>
     </a>
@@ -206,7 +210,7 @@
   }
 
   .header{
-    padding: 0 20px;
+    /* padding: 0 20px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -232,7 +236,8 @@
   }
 
   .brand img {
-    width: 200px;
+    width: 90%;
+    /* height: 50%; */
   }
 
   .header .header-list, .header .header-search, .header .header-list li a{
@@ -246,7 +251,7 @@
   }
 
   .header .header-list{
-    flex: 1;
+    /* flex: 1; */
     display: flex;
     align-items: center;
     padding: 0 0 0 10%;
@@ -262,18 +267,25 @@
     cursor: pointer;
   }
 
-  .header .header-list li.active{
+  .header .header-list {
     line-height: 2;
-    border-bottom: 1px solid white;
   }
-
+  li.active{
+    color: rgb(240, 43, 9);
+  }
+  .headlabel{
+  
+  }
   .header .header-list li:hover a, .header .header-search:hover, .header .header-list li:hover{
     color: #d2d7d3;
+
   }
   /* sub header */
   .sub-header {
     background-color: #241E26;
     height: 60px;
+    position: relative;
+    z-index:5;
   }
 
   .sub-header > div {
