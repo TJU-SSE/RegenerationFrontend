@@ -1,5 +1,9 @@
 <template>
+
   <div class="main-container">
+    <div class="big-title">
+      {{show.designer.name}}
+    </div>
     <div class="designer-show">
       <div class="thumb-swiper">
         <thumbSwiper :designer="show" :imgs="show.imgs" :year="year" :season="season"></thumbSwiper>
@@ -127,6 +131,7 @@
 
 <style scoped>
   /* main container */
+
   .main-container {
     display: flex;
     display: -webkit-flex;
@@ -171,6 +176,14 @@
     width: 100%;
     top: -70px;
     z-index: -1;
+  }
+
+  .big-title {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 5em;
+    text-align: center;
+    font-family: Bernard;
   }
 
   .center-text {
