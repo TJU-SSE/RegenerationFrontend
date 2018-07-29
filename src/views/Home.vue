@@ -1,21 +1,31 @@
 <template>
   <div>
     <AutoSwiper :imgs="news.slice(0, 4)"></AutoSwiper>
-    <div class="magazine">
+    <div class="magazine" style="height:1200px">
       <div class="sub-header mag-bg">
         <img src="../../static/img/RUNWAY-01.png"/>
         <h3>{{config.home.runway}}</h3>
       </div>
-      <div class="center">
-        <div class="mag-photo">
-          <div v-for="img in shows.slice(0, 5)">
-            <img :src="img.img_url" alt="magzine" @click="toShow(img.id)">
-          </div>
+      <div class="center" >
+        <div class="mag-photo" >        
+            <div v-for="img in shows.slice(0, 3)">           
+                <img :src="img.img_url" alt="magzine" style="height:800px" @click="toShow(img.id)">     
+            </div>                      
         </div>
-      </div>
+        <div >
+            <div v-for="img in shows.slice(0, 3)"> 
+              <el-col :span="1"><p></p></el-col>  
+              <el-col :span="6">
+                <p class="desc">{{img.desc}}</p> 
+              </el-col>         
+              <el-col :span="1"><p></p></el-col>     
+            </div>  
+        </div> 
+
+      </div>      
     </div>
     <div class="runway">
-      <div class="sub-header run-bg">
+      <div class="sub-header run-bg" >
         <img src="../../static/img/designer.png"/>
         <h3>{{config.home.designer}}</h3>
       </div>
@@ -159,6 +169,7 @@
         })
 
         getAllShows(0, 10).then(res => {
+          console.log("all shows here")
           console.log(res)
           this.shows = res.msg.shows
         }).catch(err => {
@@ -327,7 +338,10 @@
     margin: 0 20px;
     cursor: pointer;
   }
+  .desc{
+    font-size: 15px;
 
+  }
   /* runway */
   .run-photo {
     /*width: 100%;*/

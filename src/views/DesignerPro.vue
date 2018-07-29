@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-header height="150px">{{designer.name}}</el-header>
+    <el-header height="150px" class="title">{{designer.name}}</el-header>
     <el-container>
       <el-aside width="35%">
         <div class="left">
@@ -165,6 +165,16 @@
 
 <style scoped>
 
+  @font-face {
+    font-family: 'Bernard';
+    src: url(../assets/fonts/Bernard.ttf);
+  }
+
+  @font-face {
+    font-family: 'Tw';
+    src: url(../assets/fonts/Tw.ttf);
+  }
+
   /*@font-face {*/
     /*font-family: lantinghei;*/
     /*src: url('../../static/fonts/Arial.ttf');*/
@@ -192,6 +202,11 @@
     text-align: left;
     line-height: 30px;
     padding-left: 6%;
+  }
+
+  .title {
+    font-family: Bernard;
+    letter-spacing: 5px;
   }
   
   body > .el-container {
@@ -261,7 +276,9 @@
     align-self: flex-start;
     align-items: left;
     margin-left: 10%;
-    font-size: 14px
+    font-size: 14px;
+    font-family: Bernard;
+    letter-spacing: 1px;
   }
 
   /* right */
@@ -269,7 +286,8 @@
     flex-direction: column;
     align-items: center;
     min-width: 60%;
-    max-width: 80%
+    max-width: 80%;
+    font-family: Tw;
   }
 
   .tabs {

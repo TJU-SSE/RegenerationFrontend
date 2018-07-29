@@ -1,5 +1,6 @@
 <template>
-  <div class="header">
+  <div>
+   <div class="header">
     <div class="social-icon">
       <img src="../../static/icon/facebook.svg" alt="facebook">
       <img src="../../static/icon/ins.svg" alt="ins">
@@ -10,13 +11,16 @@
     <div class="big-title">
       <img src="../../static/img/regeneration主页logo-01.png"/>
     </div>
-    <div class="navigation">
+    </div>
+
+    <div class="sub-header">
+     <div class="navigation">
       <router-link to="/Home">HOME</router-link>
       <router-link :to="{ name: 'runway'}" exact>RUNWAY</router-link>
       <router-link :to="{ name: 'designerHome' }">DESIGNER</router-link>
       <router-link :to="{ name: 'news'}" exact>NEWS</router-link>
       <router-link :to="{ name: 'contact'}" exact>ABOUT US</router-link>
-      <div>
+      <!-- <div>
         <p class="search-label">Search</p>
         <div class="search">
           <Select
@@ -38,7 +42,8 @@
             </OptionGroup>
           </Select>
         </div>
-      </div>
+      </div> -->
+     </div>
     </div>
   </div>
 </template>
@@ -159,9 +164,13 @@
   /* header */
   .header {
     height: 300px;
-    background: linear-gradient(70deg, white, #433B38 80%, #1E0A02);
+    /* background: linear-gradient(70deg, white, #433B38 80%, #1E0A02); */
+    background: url('../../static/img/homeheader.jpg');
   }
-
+  .sub-header {
+    background-color: #241E26;
+    height: 60px;
+  }
   .social-icon > img {
     padding: 10px;
     width: 40px;
@@ -195,7 +204,7 @@
     display: -webkit-flex;
     flex-direction: row;
     align-items: center;
-    width: 40%;
+    width: 85%;
     margin: 0 auto;
     font-family: "Helvetica Neue Thin";
   }
@@ -203,7 +212,7 @@
   .navigation > a {
     text-decoration: none;
     font-size: 1.5em;
-    color: white;
+    color: rgb(207, 45, 45);
     padding: 5px;
     margin: 0 auto;
   }
@@ -213,6 +222,7 @@
     right: 10%;
     font-size: 1em;
     color: white;
+    font-family:"Microsoft YaHei"
   }
 
   .search > img {

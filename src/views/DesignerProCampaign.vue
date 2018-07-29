@@ -199,6 +199,13 @@
     border-bottom: 1px solid #ccc;
   }
 
+  .biography h4 {
+    font-family: 'Tw' !important;
+  }
+
+  .bio-content {
+    font-family: 'Tw' !important;
+  }
 
   .biography thead > tr > th {
     padding: 5px;

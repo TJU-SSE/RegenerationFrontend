@@ -13,23 +13,23 @@
       <div class="visitorMessage" valign="right">
         <h2>Please leave your contact detail here for cooperation or work opportunity</h2>
         <div style="width: 80%">
-          <el-form label-position="top" label-width="80px" :model="contactForm">
+          <el-form label-position="top" label-width="80px" :model="contactForm" ref="contactForm">
             <el-form-item label="Name:">
               <el-input v-model="contactForm.name"></el-input>
             </el-form-item>
-            <el-form-item label="E-mail:">
+            <el-form-item label="E-mail:" prop="mail">
               <el-input v-model="contactForm.mail"></el-input>
             </el-form-item>
             <el-form-item label="Content:">
               <el-input type="textarea" v-model="contactForm.content"></el-input>
             </el-form-item>
           </el-form>
-          <button @click="submit">SUBMIT</button>
+          <button @click="submit('contactForm')">SUBMIT</button>
         </div>
       </div>
     </div>
     <div class="right">
-      <h3 style="text-align:center; color: red">| SHANGHAI |</h3>
+      <h3 class="city">| SHANGHAI |</h3>
       <div class="map">
         <iframe width='400' height='450' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='http://f.amap.com/11jxp_0B95cR5'></iframe>
       </div>
@@ -44,7 +44,7 @@
           <p>{{contact.address}}</p>
         </div>
       </div>
-      <h3 style="text-align:center; color: red">| LONDON |</h3>
+      <h3 class="city">| LONDON |</h3>
       <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d155.1613737864298!2d-0.09867483611529332!3d51.52088464416027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b56bb5bfb43%3A0xfc22c89f43faecfc!2sFlorin+Court!5e0!3m2!1szh-CN!2sus!4v1531817952877" width='400' height='450' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'></iframe>
       </div>
@@ -61,7 +61,7 @@
 <script>
 
   import VueMarkdown from '../../node_modules/vue-markdown'
-  import {getAllWorkers, getContact} from '../service/getData'
+  import {getAllWorkers, getContact, sendContact} from '../service/getData'
   require('../../node_modules/github-markdown-css/github-markdown.css')
 
   export default {
@@ -171,7 +171,18 @@
         })
       },
       submit (formName) {
-        console.log('这里要提交表单，记得删除log！')
+        const {name: varificationCode, mail: email, content} = this.contactForm
+        sendContact(
+          {
+            varificationCode,
+            email,
+            content
+          }
+        ).then(res => {
+          console.log(res)
+        }).catch(err => {
+          console.log(err)
+        })
       }
     },
     mounted () {
@@ -193,6 +204,16 @@
     src: url(../assets/fonts/HelveticaNeueLt.ttf);
   }
 
+  @font-face {
+    font-family: 'Bernard';
+    src: url(../assets/fonts/Bernard.ttf);
+  }
+
+  @font-face {
+    font-family: 'Tw';
+    src: url(../assets/fonts/Tw.ttf);
+  }
+
   .main-container {
     display: flex;
     display: -webkit-flex;
@@ -212,6 +233,7 @@
     flex-direction: column;
     align-items: center;
     margin-right: 8%;
+    font-family: Barnard;
   }
 
   .markdown p {
@@ -267,6 +289,7 @@
   }
 
   .visitorMessage h2{
+    font-family: Bernard;
     font-size: 1.8em;
     color:#c31820
   }
@@ -295,6 +318,7 @@
     display: flex;
     display: -webkit-flex;
     flex-direction: column;
+    font-family: Tw;
   }
 
   .contacts > div {
@@ -371,6 +395,12 @@
     margin-left: 25px;
   }
 
+  .city {
+    font-size: 28px;
+    color: #c5181f;
+    padding-left: 130px;
+  }
+
   @media screen and (max-width: 835px){
     .links > a {
       font-size: 0.5em;
@@ -423,4 +453,12 @@
     }
   }
 
+</style>
+
+<style>
+  .el-form-item__label {
+    color: black !important;
+    padding: 0 0 0px !important;
+    font-size: 20px !important;
+  }
 </style>

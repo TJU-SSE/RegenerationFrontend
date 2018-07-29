@@ -1,19 +1,19 @@
 <template>
   <div>
-    <div class="sub-header">
+    <!-- <div class="sub-header">
       <div>
         <span style="color:#cc141e; font-size: 20px">SHOW FINDER</span>
         <AlphaDropDown :opts="optsAlpha" desc="SEARCH DESIGNERS" class="drop"></AlphaDropDown>
         <DropDown :opts="opts" desc="SEARCH SEASONS" class="drop"></DropDown>
       </div>
-    </div>
+    </div> -->
     <div class="big-title">
       {{config.runway.title}}
     </div>
     <br/><br/>
     <div class="main-container">
       <div class="left-pics">
-        <div v-for="(n, index) in shows.slice(0, 6)" :key="index">
+        <div v-for="(n, index) in result.slice(0, 6)" :key="index">
           <img :src="n.img_url" alt="pic" @click="onImgClick($event, n.id)">
           <span class="showname">{{n.name}}</span>
         </div>
@@ -137,6 +137,19 @@
           console.log('config', res)
           if (res.code === '0') {
             this.config = JSON.parse(res.msg.extraTitle)
+            console.log(this.config.home.runway)
+            if (this.config.home.runway === '#2017AW') {
+              this.config.runway.title = 'AUTUMN/WINTER 2017'
+            }
+            if (this.config.home.runway === '#2018SS') {
+              this.config.runway.title = 'SPRING/SUMMER 2018'
+            }
+            if (this.config.home.runway === '#2018AW') {
+              this.config.runway.title = 'AUTUMN/WINTER 2018'
+            }
+            if (this.config.home.runway === '#2019SS') {
+              this.config.runway.title = 'SPRING/SUMMER 2019'
+            }
           }
         }).catch(err => {
           console.log(err)
@@ -162,6 +175,15 @@
     mounted () {
       document.title = this.title
       this.initData()
+    },
+    computed: {
+      result () {
+        return this.shows
+          .filter((show) => {
+            const text = Object.values(show).join('___').toLowerCase()
+            return text.search('18') > 0
+          })
+      }
     }
   }
 </script>
@@ -176,6 +198,16 @@
   @font-face {
     font-family: "Helvetica Neue Thin";
     src: url(../assets/fonts/HelveticaNeueLt.ttf);
+  }
+
+  @font-face {
+    font-family: 'Bernard';
+    src: url(../assets/fonts/Bernard.ttf);
+  }
+
+  @font-face {
+    font-family: 'Tw';
+    src: url(../assets/fonts/Tw.ttf);
   }
 
   /* sub header */
@@ -214,7 +246,7 @@
     margin-bottom: 30px;
     font-size: 2.5em;
     text-align: center;
-    font-family: 'DIN Condensed Bold';
+    font-family: Bernard;
   }
 
   /* main container */
@@ -227,6 +259,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
+    font-family: Bernard;
   }
 
   .left-pics {
@@ -347,7 +380,7 @@
     width: 100%;
     letter-spacing: .1em;
     color: black;
-    font-family: "Helvetica Neue";
+    font-family: Bernard;
     font-size: 1.1em;
     font-weight: 900;
   }
