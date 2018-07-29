@@ -230,7 +230,7 @@
   }
 
   .left-pics {
-    width: 25%;
+    width: 550px;
     display: flex;
     display: -webkit-flex;
     flex-direction: row;
@@ -248,18 +248,19 @@
   .left-pics > div > img {
     padding: 3px;
     padding-bottom: 0px;
-    width: 240px;
-    height: 360px;
+    width: 240px !important;
+    height: 360px !important;
     cursor: pointer;
     transition: .5s;
+    border: 0px solid black !important;
   }
 
-  .left-pics > div > img:hover {
+  /* .left-pics > div > img:hover {
     transform: scale(1.1, 1.1);
-  }
+  } */
 
   .showname {
-    width: 174px;
+    width: 234px;
     color: #cc141e;
     text-align: center;
     background-color: #241E26;
@@ -294,7 +295,7 @@
     padding: 10px;
     background-color: black;
     color: #cc141e;
-    border: 1px solid ghostwhite;
+    border: 0px solid ghostwhite;
   }
 
   .tabs > div.active {
