@@ -247,6 +247,7 @@
     font-size: 2.5em;
     text-align: center;
     font-family: Bernard;
+    letter-spacing: 2px;
   }
 
   /* main container */
