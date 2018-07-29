@@ -259,7 +259,7 @@
   .header .header-list, .header .header-search, .header .header-list li a{
     color: white;
     font-family: "Tw";
-    font-size: 18px !important;
+    font-size: 30px !important;
     letter-spacing: 2px !important;
   }
 
