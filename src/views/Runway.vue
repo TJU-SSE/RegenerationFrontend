@@ -319,6 +319,7 @@
   .tabs {
     display: flex;
     display: -webkit-flex;
+    font-size: 16px;
     flex-direction: row;
     align-items: center;
   }
@@ -382,7 +383,7 @@
     letter-spacing: .1em;
     color: black;
     font-family: Bernard;
-    font-size: 1.1em;
+    font-size: 1.5em;
     font-weight: 900;
   }
 
