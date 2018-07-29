@@ -50,15 +50,15 @@
           <div v-for="item in news.slice(0, 3)">
             <div>
               <div>
-                <p>{{item.time}}</p>
+                <p style="font-family: Bernard; letter-spacing: 2px">{{item.time}}</p>
                 <!--<p>{{item.writer}}</p>-->
                 <ul>
-                  <li v-for="tag in item.tag">{{tag.tagTitle}}</li>
+                  <li v-for="tag in item.tag" style="font-family: Bernard; letter-spacing: 2px">{{tag.tagTitle}}</li>
                 </ul>
               </div>
             </div>
             <img style="margin-left: 40px;" :src="item.cover_img" alt="news" @click="toNews(item.newsId)">
-            <h4 style="margin-left: 15px;">{{item.title}}</h4>
+            <h4 style="margin-left: 15px; font-family: Bernard; letter-spacing: 2px">{{item.title}}</h4>
           </div>
         </div>
         <div class="news-second">
@@ -313,6 +313,8 @@
     align-items: center;
     position: absolute;
     margin-top: -240px;
+    font-family: Bernard;
+    letter-spacing: 2px;
   }
 
   .mag-photo {
@@ -697,6 +699,8 @@
 
     .sub-header {
       height: 705px;
+      font-family: Bernard;
+      letter-spacing: 2px;
     }
 
     .mag-bg {
