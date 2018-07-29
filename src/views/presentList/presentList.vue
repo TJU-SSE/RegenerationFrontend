@@ -34,7 +34,7 @@
               </div>
             </div>
           </div>
-          <p style="position: relative; right: -350px; color: #1d90e6; cursor: pointer" @click="modalFlag=true;activeItem=-1">More</p>
+          <p style="position: relative; right: -350px; color: #1d90e6; cursor: pointer" @click="modalFlag=true;activeItem=index">More</p>
           <div class="side-desc">
             <hr>
             <p>{{item.description}}</p>
@@ -105,6 +105,7 @@
       },
       itemActive (index) {
         this.activeItem = index
+        this.choose = this.items[index]
       }
     },
     created () {

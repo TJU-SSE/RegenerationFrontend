@@ -42,11 +42,12 @@
       <div class="sub-header">
       <div>
         <span style="color:#cc141e; font-size: 20px">SHOW FINDER</span>
-        <AlphaDropDown :opts="optsAlpha" desc="SEARCH DESIGNERS" class="drop"></AlphaDropDown>
-        <DropDown :opts="opts" desc="SEARCH SEASONS" class="drop"></DropDown>
+          <AlphaDropDown :opts="optsAlpha" desc="SEARCH DESIGNERS" class="drop"></AlphaDropDown>
+          <DropDown :opts="opts" desc="SEARCH SEASONS" class="drop"></DropDown>
       </div>
     </div>
   </div>
+  
   </div>
 </template>
 
@@ -209,6 +210,21 @@
     src: url(../assets/fonts/HelveticaNeueLt.ttf);
   }
 
+  @font-face {
+    font-family: 'Bernard';
+    src: url(../assets/fonts/Bernard.ttf);
+  }
+
+  @font-face {
+    font-family: 'Tw';
+    src: url(../assets/fonts/Tw.ttf);
+  }
+
+  .sub-header span {
+    font-family: Tw;
+    letter-spacing: 2px;
+  }
+
   .header{
     /* padding: 0 20px; */
     display: flex;
@@ -242,7 +258,9 @@
 
   .header .header-list, .header .header-search, .header .header-list li a{
     color: white;
-    font-family: "Helvetica Neue Thin";
+    font-family: "Tw";
+    font-size: 18px !important;
+    letter-spacing: 2px !important;
   }
 
   .search-bar {
@@ -310,6 +328,7 @@
     top: 10px;
     margin-right: 10px;
     font-size: 0.8em;
+    font-family: Tw;
   }
 
   @media (min-device-width: 320px) and (max-device-width: 568px){
@@ -319,5 +338,11 @@
     li {
       font-size: 1.2em;
     }
+  }
+</style>
+
+<style>
+  .drop strong {
+    letter-spacing: 2px !important;
   }
 </style>
