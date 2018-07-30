@@ -31,7 +31,7 @@
     <div class="right">
       <h3 class="city">| SHANGHAI |</h3>
       <div class="map">
-        <iframe width='400' height='450' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='http://f.amap.com/11jxp_0B95cR5'></iframe>
+        <iframe width='400' height='450' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='http://f.amap.com/5J74C_0715iY8'></iframe>
       </div>
       <div class="contacts">
         <div>
