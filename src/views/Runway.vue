@@ -166,10 +166,6 @@
     computed: {
       result () {
         return this.shows
-          .filter((show) => {
-            const text = Object.values(show).join('___').toLowerCase()
-            return text.search('18') > 0
-          })
       }
     }
   }
