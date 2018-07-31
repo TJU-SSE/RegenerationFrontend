@@ -192,6 +192,10 @@
     flex-direction: column;
   }
 
+  .biography hr {
+    border-top: 1px solid black
+  }
+
   .biography table {
     font-size: 1.1em;
     margin: 10px auto;

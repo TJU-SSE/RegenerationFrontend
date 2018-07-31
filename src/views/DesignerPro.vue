@@ -10,10 +10,10 @@
             <div class="ranking">
             </div>
             <div class="agency" align="left">
-              <p>E-mail:{{designer.mail}}</p>
-              <p>Fax:{{designer.fax}}</p>
-              <p>Tel:{{designer.tel}}</p>
-              <p>Link:{{designer.link}}</p>
+              <p>E-mail:  {{designer.email}}</p>
+              <p>Fax:  {{designer.fax}}</p>
+              <p>Tel:  {{designer.phone}}</p>
+              <p>Link:  {{designer.link}}</p>
             </div>
           </div>
         </div>
@@ -123,9 +123,9 @@
           social: '',
           viewcount: '',
           first: '',
-          mail: '12345@gmail.com',
+          email: '12345@gmail.com',
           fax: '12345678',
-          tel: '12345678',
+          phone: '12345678',
           link: 'StevenLee.uk'
         },
         editDialog: false,
@@ -150,6 +150,10 @@
         console.log(res)
         if (res.code === '0') {
           this.designer = res.msg
+          this.designer.email = '123456789@gmail.com'
+          this.designer.fax = '123456789'
+          this.designer.phone = '123456789'
+          this.designer.link = 'StevenLee.uk'
         }
       }).catch(err => {
         console.log(err)
@@ -257,8 +261,6 @@
   }
 
   .detail {
-    border-left: 1px solid gray;
-    border-right: 1px solid gray;
     width: 90%;
     display: flex;
     display: -webkit-flex;
@@ -279,6 +281,7 @@
     font-size: 14px;
     font-family: Bernard;
     letter-spacing: 1px;
+    padding-top: 20px;
   }
 
   /* right */
@@ -286,7 +289,7 @@
     flex-direction: column;
     align-items: center;
     min-width: 60%;
-    max-width: 80%;
+    max-width: 90%;
     font-family: Tw;
   }
 
