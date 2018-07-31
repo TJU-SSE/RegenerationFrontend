@@ -1,7 +1,7 @@
 <template>
   <div class="alpha-container">
     <ul id="drop">
-      <li v-for="item in opts">
+      <li v-for="(item,key) in opts" :key="key">
         <ul id="main-content" :id=item.head>
           <li class="list-item list-header">{{item.head}}</li>
           <li v-for="show in item.items" class="list-item"><router-link :to="{name: 'designerPro', params: {designerId: show.id}}">{{show.name}}</router-link></li>
@@ -38,6 +38,17 @@
 </script>
 
 <style scoped>
+
+  @font-face {
+    font-family: 'Bernard';
+    src: url(/assets/fonts/Bernard.ttf);
+  }
+
+  @font-face {
+    font-family: 'Tw';
+    src: url(/assets/fonts/Tw.ttf);
+  }
+
   .alpha-container {
     width: 100%;
     height: 100%;
@@ -77,14 +88,15 @@
   .list-header {
     margin: 3px 0;
     font-weight: bold;
+    font-family: Bernard;
   }
 
   .list-item {
     width: 100%;
     letter-spacing: .1em;
     color: #333;
-    font-family: "FranklinGothic", Helvetica, sans-serif;
     font-size: 18px;
+    font-family:Tw;
   }
 
   a {
@@ -108,8 +120,9 @@
 
   .nav > li {
     padding: 0px;
-    font-size: 1.5em;
+    font-size: 2em;
     cursor: pointer;
+    font-family: Bernard;
   }
 
   /* For iphone 5 */

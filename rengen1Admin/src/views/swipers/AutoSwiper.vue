@@ -54,6 +54,15 @@
     background-position: center;
     background-color: #000;
   }
+   .swiper-containter {
+     font-size: .8em;
+     position: absolute;
+     bottom: -3%;
+     background-color: #000;
+     width: 100%;
+     height: 33%;
+     opacity: .7;
+   }
 
   .text {
     position: absolute;

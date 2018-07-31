@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="biography">
-      <h2>biography</h2>
+      <h2>Biography</h2>
       <hr>
       <br>
       <p>{{show.desc}}</p>

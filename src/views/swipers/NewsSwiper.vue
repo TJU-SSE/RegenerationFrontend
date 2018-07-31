@@ -50,7 +50,17 @@
   }
 </script>
 
-<style scoped="">
+<style scoped>
+  @font-face {
+    font-family: 'Bernard';
+    src: url(/assets/fonts/Bernard.ttf);
+  }
+
+  @font-face {
+    font-family: 'Tw';
+    src: url(/assets/fonts/Tw.ttf);
+  }
+
   .swiper-wrapper > div{
     height: 750px;
     background-size: contain;
@@ -68,12 +78,14 @@
   }
 
   .text h1{
+    font-family: Bernard;
     font-weight: bolder;
-    font-size: 3em;
+    font-size: 5em;
   }
   .text p{
+    font-family: Bernard;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 2.5em;
   }
 
   .swiper-button-prev {
