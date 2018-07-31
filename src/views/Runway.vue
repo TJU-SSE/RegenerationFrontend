@@ -137,19 +137,6 @@
           console.log('config', res)
           if (res.code === '0') {
             this.config = JSON.parse(res.msg.extraTitle)
-            console.log(this.config.home.runway)
-            if (this.config.home.runway === '#2017AW') {
-              this.config.runway.title = 'AUTUMN/WINTER 2017'
-            }
-            if (this.config.home.runway === '#2018SS') {
-              this.config.runway.title = 'SPRING/SUMMER 2018'
-            }
-            if (this.config.home.runway === '#2018AW') {
-              this.config.runway.title = 'AUTUMN/WINTER 2018'
-            }
-            if (this.config.home.runway === '#2019SS') {
-              this.config.runway.title = 'SPRING/SUMMER 2019'
-            }
           }
         }).catch(err => {
           console.log(err)
