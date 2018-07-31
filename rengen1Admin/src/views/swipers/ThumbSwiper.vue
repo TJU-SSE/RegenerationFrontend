@@ -80,6 +80,14 @@
   .gallery-thumbs .swiper-slide-active {
     opacity: 1;
   }
+  element.style {
+     transform: translate3d(-829px, 0px, 0px);
+     transition-duration: 0ms;
+ }
+ .swiper-container-android .swiper-slide, .swiper-wrapper {
+     -webkit-transform: translateZ(0);
+     transform: translateZ(0);
+ }
 
   .label {
     position: relative;
