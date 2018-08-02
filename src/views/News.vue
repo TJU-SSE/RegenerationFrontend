@@ -162,4 +162,8 @@
     margin-left: 20px;
     font-size: 1.1em;
   }
+
+  .regen-container {
+    font-family: Tw
+  }
 </style>
