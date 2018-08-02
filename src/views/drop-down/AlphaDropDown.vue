@@ -1,6 +1,6 @@
 <template>
   <div class="drop-down" @mouseleave="removeDrop">
-    <button @click="down"><strong>{{desc}}</strong></button>
+    <button @click="down"><strong>{{desc}}</strong></button><i class="el-icon-arrow-down"></i>
     <ul :class="[dropFlag ? 'active': '']" id="drop">
       <li v-for="item in opts">
         <ul id="main-content" :id=item.head>
@@ -63,11 +63,11 @@
     padding: 4px;
     padding-top: 10px;
     border: none;
+    /* height: 100%; */
     width: 90%;
     background-color: white;
     font-size: 1.5em;
   }
-
   ul {
     background-color: white;
   }

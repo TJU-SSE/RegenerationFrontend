@@ -1,6 +1,6 @@
 <template>
   <div class="drop-down" @mouseleave="removeDrop">
-    <button @click="down"><strong>{{desc}}</strong></button>
+    <button @click="down"><strong>{{desc}}</strong></button><i class="el-icon-arrow-down"></i>
     <ul :class="[dropFlag ? 'active': '']" id="drop">
       <li v-for="(item, index) in opts" :key="index" v-if="item.head.length > 0">
         <ul>

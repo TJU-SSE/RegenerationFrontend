@@ -231,6 +231,7 @@
     text-align: center;
     font-family: Bernard;
     letter-spacing: 2px;
+    color: black;
   }
 
   /* main container */
@@ -289,7 +290,7 @@
 
   /* tabs */
   .right-tabs {
-    width: 12%;
+    width: 20%;
     height: 80%;
     background-color: #cc141e;
     border: 1px solid ghostwhite;

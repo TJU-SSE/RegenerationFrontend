@@ -301,7 +301,7 @@
   /* sub header */
   .sub-header {
     background-color: #2a0910;
-    height: 60px;
+    height: 65px;
     position: relative;
     z-index:5;
   }
