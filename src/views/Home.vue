@@ -208,7 +208,8 @@
   /* header */
   .header {
     height: 300px;
-    background: linear-gradient(70deg, white, #433B38 80%, #1E0A02);
+    background: white;
+    color: rgb(255, 255, 255);
   }
 
   .social-icon > img {
@@ -328,7 +329,8 @@
   }
 
   .mag-bg {
-    background: linear-gradient(70deg, white 72%, rgb(67, 59, 56));
+    background: white;
+    color: rgb(255, 255, 255);
   }
 
   .mag-photo > div {
@@ -357,7 +359,8 @@
   }
 
   .run-bg {
-    background: linear-gradient(70deg, white 71%, rgb(120, 114, 112));
+    background: white;
+    color: rgb(255, 255, 255);
   }
 
   .run-photo > div {
@@ -504,7 +507,8 @@
     position: absolute;
     right: 0;
     width: 1500px;
-    background: linear-gradient(70deg, white 85%, rgb(175, 175, 175));
+    background: white;
+    color: rgb(255, 255, 255);
   }
 
   /* adapt small screen */
@@ -586,7 +590,7 @@
     }
 
     .run-bg {
-      background: linear-gradient(70deg, white 85%, rgb(160, 160, 160));
+      background: white;
     }
 
     .news-first {
@@ -642,7 +646,7 @@
     }
 
     .mag-bg {
-      background: linear-gradient(70deg, white 77%, rgb(67, 59, 56));
+      background: white;
     }
 
     .run-photo > div > img {
@@ -650,7 +654,7 @@
     }
 
     .run-bg {
-      background: linear-gradient(70deg, white 88%, rgb(144, 144, 144));
+      background: white;
     }
 
     .news-photo {
@@ -704,11 +708,11 @@
     }
 
     .mag-bg {
-      background: linear-gradient(70deg, white 77%, rgb(67, 59, 56));
+      background:white;
     }
 
     .run-bg {
-      background: linear-gradient(70deg, white 89%, rgb(144, 144, 144));
+      background: white;
     }
 
     .news-photo {
