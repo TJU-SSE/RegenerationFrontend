@@ -303,9 +303,11 @@
   .tabs {
     display: flex;
     display: -webkit-flex;
-    font-size: 16px;
+    font-size: 18px;
     flex-direction: row;
     align-items: center;
+    font-family: Tw;
+    letter-spacing: 1.5px;
   }
 
   .tabs > div {
@@ -366,7 +368,7 @@
     width: 100%;
     letter-spacing: .1em;
     color: black;
-    font-family: Bernard;
+    font-family: Tw;
     font-size: 1.5em;
     font-weight: 900;
   }
