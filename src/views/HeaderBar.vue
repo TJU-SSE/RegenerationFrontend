@@ -232,7 +232,8 @@
     align-items: center;
     margin: 0;
     height: 200px;
-    background: url('../../static/img/homeheader.jpg');
+    background: url('../../static/img/homeheader.jpg') no-repeat;
+    background-size:100%;;
   }
   .big-title {
     display: flex;

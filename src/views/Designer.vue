@@ -138,8 +138,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    border: 10px solid #cc141e;;
-    border-radius: 50%;
+    /* border: 10px solid #cc141e;; */
+    /* border-radius: 50%; */
   }
   .avatar:hover{
     width: 250px;
@@ -149,7 +149,7 @@
   .deback{
     width: 250px;
     height: 250px;
-    background:#cc141e;; 
+    /* background:#cc141e;;  */
     align-content: center;
     align-items: center;
     vertical-align: middle; 

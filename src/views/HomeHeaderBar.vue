@@ -175,7 +175,8 @@
   .header {
     height: 300px;
     /* background: linear-gradient(70deg, white, #433B38 80%, #1E0A02); */
-    background: url('../../static/img/homeheader.jpg');
+    background: url('../../static/img/homeheader.jpg') no-repeat;
+    background-size:100%;
   }
   .sub-header {
     background-color: #2a0910;
