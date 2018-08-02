@@ -16,7 +16,7 @@
           <el-row>
            <el-col :span="1"><p></p></el-col> 
            <el-col :span="6"> 
-              <img :src="item.img_url" class="avatar" :border="false" @click="onImgClick($event,item.id)"/> 
+              <div class="deback"><img :src="item.img_url" class="avatar" :border="false" @click="onImgClick($event,item.id)"/></div>
            </el-col>
            <el-col :span="1"><p></p></el-col>   
           </el-row>
@@ -130,16 +130,30 @@
     margin: 3px;
   }  
   .avatar {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
 
     display: inline-block;
     /* background: url('../assets/defaultAvatar2.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    border: 10px solid black;
+    border: 10px solid #cc141e;;
     border-radius: 50%;
+  }
+  .avatar:hover{
+    width: 250px;
+    height: 250px;
+    transition-duration: 0.5s;
+  }
+  .deback{
+    width: 250px;
+    height: 250px;
+    background:#cc141e;; 
+    align-content: center;
+    align-items: center;
+    vertical-align: middle; 
+    line-height:250px;  
   }
   .dname{
     font-size: 15px;
