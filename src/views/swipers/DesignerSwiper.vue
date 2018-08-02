@@ -52,7 +52,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #000;
+    background-color: #2c0206;
   }
 
   .text {

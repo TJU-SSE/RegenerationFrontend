@@ -317,7 +317,7 @@
     text-align: center;
     font-weight: 900;
     padding: 10px;
-    background-color: black;
+    background-color: #2c0206;
     color: #cc141e;
     border: 0px solid ghostwhite;
   }

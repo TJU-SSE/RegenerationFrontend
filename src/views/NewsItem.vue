@@ -48,4 +48,8 @@
 
 <style scoped>
 
+.wf-title {
+  font-size: 0.9em;
+}
+
 </style>

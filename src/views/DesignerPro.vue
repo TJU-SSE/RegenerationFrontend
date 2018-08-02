@@ -370,7 +370,7 @@
 
 <style>
   .el-tabs__item {
-    background-color: black;
+    background-color: #2c0206;
   }
   .el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active {
     color: black !important;
