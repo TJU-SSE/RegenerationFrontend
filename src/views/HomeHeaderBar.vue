@@ -9,7 +9,7 @@
       <img src="../../static/icon/qq.svg" alt="QQ">
     </div>
     <div class="big-title">
-      <img src="../../static/img/regeneration主页logo-01.png"/>
+      <h1>REGENERATION</h1>
     </div>
     </div>
 
@@ -196,6 +196,13 @@
     display: -webkit-flex;
     flex-direction: row;
     justify-content: center;
+  }
+
+  .big-title h1 {
+    color: #cc141e;
+    font-size: 140px;
+    font-family: Tw;
+    letter-spacing: 45px;
   }
 
   @media screen {
