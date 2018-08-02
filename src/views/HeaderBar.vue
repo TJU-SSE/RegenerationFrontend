@@ -3,7 +3,7 @@
   <header class="header">
     <el-col :span="12">
     <router-link :to="{ name: 'Home' }" class="brand">
-      <img class="big-title" src="../../static/img/regeneration主页logo-01.png">
+      <h1>REGENERATION</h1>
     </router-link>
     </el-col>
     <el-col :span="12">
@@ -245,10 +245,17 @@
   }
 
   .header .brand{
-    color: #ec644B;
+    color: #cc141e;
     font-size: xx-large;
     font-weight: bolder;
     line-height: 30;
+  }
+
+  .brand h1 {
+    font-size: 60px;
+    font-family: Tw;
+    letter-spacing: 20px;
+    padding-left: 20px;
   }
 
   .brand img {
