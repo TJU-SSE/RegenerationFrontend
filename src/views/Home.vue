@@ -12,7 +12,7 @@
                 <img :src="img.img_url" alt="magzine" style="height:800px" @click="toShow(img.id)">     
             </div>                      
         </div>
-        <div >
+        <div>
             <div v-for="img in shows.slice(0, 3)"> 
               <el-col :span="1"><p></p></el-col>  
               <el-col :span="6">
