@@ -56,11 +56,6 @@
     src: url(/assets/fonts/Bernard.ttf);
   }
 
-  @font-face {
-    font-family: 'Tw';
-    src: url(/assets/fonts/Tw.ttf);
-  }
-
   .swiper-wrapper > div{
     height: 750px;
     background-size: contain;
@@ -78,12 +73,12 @@
   }
 
   .text h1{
-    font-family: Bernard;
+    font-family: Bernard, CH;
     font-weight: bolder;
     font-size: 5em;
   }
   .text p{
-    font-family: Bernard;
+    font-family: Bernard, CH;
     font-weight: bold;
     font-size: 2.5em;
   }

@@ -204,11 +204,11 @@
   }
 
   .biography h4 {
-    font-family: 'Tw' !important;
+    font-family: 'Tw', CH !important;
   }
 
   .bio-content {
-    font-family: 'Tw' !important;
+    font-family: 'Tw', CH !important;
   }
 
   .biography thead > tr > th {

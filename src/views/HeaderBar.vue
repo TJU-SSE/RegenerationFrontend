@@ -221,7 +221,7 @@
   }
 
   .sub-header span {
-    font-family: Tw;
+    font-family: Tw, CH;
     letter-spacing: 2px;
   }
 
@@ -254,7 +254,7 @@
 
   .brand h1 {
     font-size: 60px;
-    font-family: Tw;
+    font-family: Tw, CH;
     letter-spacing: 20px;
     padding-left: 20px;
   }
@@ -266,7 +266,7 @@
 
   .header .header-list, .header .header-search, .header .header-list li a{
     color: white;
-    font-family: "Tw";
+    font-family: "Tw", CH;
     font-size: 25px !important;
     letter-spacing: 2px !important;
   }
@@ -336,7 +336,7 @@
     top: 10px;
     margin-right: 10px;
     font-size: 0.8em;
-    font-family: Tw;
+    font-family: Tw, CH;
   }
 
   @media (min-device-width: 320px) and (max-device-width: 568px){

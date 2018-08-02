@@ -209,7 +209,7 @@
   }
 
   .title {
-    font-family: Bernard;
+    font-family: Bernard, CH;
     letter-spacing: 5px;
   }
   
@@ -279,7 +279,7 @@
     align-items: left;
     margin-left: 10%;
     font-size: 14px;
-    font-family: Bernard;
+    font-family: Bernard, CH;
     letter-spacing: 1px;
     padding-top: 20px;
   }
@@ -290,7 +290,7 @@
     align-items: center;
     min-width: 60%;
     max-width: 90%;
-    font-family: Tw;
+    font-family: Tw, CH;
   }
 
   .tabs {

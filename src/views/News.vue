@@ -164,6 +164,6 @@
   }
 
   .regen-container {
-    font-family: Tw
+    font-family: Tw, CH
   }
 </style>

@@ -181,7 +181,7 @@
   .sub-header {
     background-color: #2a0910;
     height: 60px;
-    font-family: 'Tw';
+    font-family: 'Tw', CH;
     font-size: 21px;
     letter-spacing: 2px;
   }
@@ -202,7 +202,7 @@
   .big-title h1 {
     color: #cc141e;
     font-size: 140px;
-    font-family: Tw;
+    font-family: Tw, CH;
     letter-spacing: 45px;
   }
 

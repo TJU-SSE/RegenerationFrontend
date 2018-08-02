@@ -229,7 +229,7 @@
     margin-bottom: 30px;
     font-size: 5em;
     text-align: center;
-    font-family: Bernard;
+    font-family: Bernard, CH;
     letter-spacing: 2px;
     color: black;
   }
@@ -244,7 +244,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    font-family: Bernard;
+    font-family: Bernard, CH;
   }
 
   .left-pics {
@@ -306,7 +306,7 @@
     font-size: 18px;
     flex-direction: row;
     align-items: center;
-    font-family: Tw;
+    font-family: Tw, CH;
     letter-spacing: 1.5px;
   }
 
@@ -368,7 +368,7 @@
     width: 100%;
     letter-spacing: .1em;
     color: black;
-    font-family: Tw;
+    font-family: Tw, CH;
     font-size: 1.5em;
     font-weight: 900;
   }

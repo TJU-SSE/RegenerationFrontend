@@ -1,7 +1,7 @@
 <template>
   <div class="main-container">
     <div class="left">
-      <vue-markdown class="markdown" v-if="contact.desc !== ''" style="font-family: qingkebenyue">{{contact.desc}}</vue-markdown>
+      <vue-markdown class="markdown" v-if="contact.desc !== ''" style="font-family: CH">{{contact.desc}}</vue-markdown>
       <div class="photos">
         <div v-for="w in workers" v-bind:key="w.id">
           <img :src="w.img_url" alt="" @click="selectWorker = w;uploadPicDialog = true">
@@ -285,11 +285,11 @@
     flex-wrap: wrap;
     -webkit-align-content: center;
     align-content: flex-end;
-    font-family: "bernard"
+    font-family: "bernard", CH
   }
 
   .visitorMessage h2{
-    font-family: Bernard;
+    font-family: Bernard, CH;
     font-size: 1.8em;
     color:#c31820
   }
@@ -318,7 +318,7 @@
     display: flex;
     display: -webkit-flex;
     flex-direction: column;
-    font-family: Tw;
+    font-family: Tw, CH;
   }
 
   .contacts > div {

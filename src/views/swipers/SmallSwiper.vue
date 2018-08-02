@@ -80,6 +80,7 @@
     width: 100%;
     height: 33%;
     opacity: .7;
+    font-family: bernard, CH
   }
 
   .text p {

@@ -140,6 +140,11 @@
     src: url(../assets/fonts/Tw.ttf);
   }
 
+  @font-face {
+    font-family: 'CH';
+    src: url(../assets/fonts/CH.otf);
+  }
+
   /* main container */
   .main-container {
     display: flex;
@@ -153,7 +158,7 @@
     margin-bottom: 30px;
     font-size: 5em;
     text-align: center;
-    font-family: Bernard;
+    font-family: Bernard, CH;
     color: black;
   }
 
@@ -177,7 +182,7 @@
   .biography {
     margin-top: 10px;
     width: 80%;
-    font-family: Bernard;
+    font-family: Bernard, CH;
     letter-spacing: 2px;
   }
 

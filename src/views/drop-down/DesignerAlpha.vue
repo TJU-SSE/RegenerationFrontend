@@ -88,7 +88,7 @@
   .list-header {
     margin: 3px 0;
     font-weight: bold;
-    font-family: Tw;
+    font-family: Tw, CH;
   }
 
   .list-item {
@@ -96,14 +96,14 @@
     letter-spacing: .1em;
     color: #333;
     font-size: 18px;
-    font-family: Tw;
+    font-family: Tw, CH;
   }
 
   a {
     color: black;
     padding-left: 2px;
     text-decoration: none !important;
-    font-family: Tw;
+    font-family: Tw, CH;
   }
 
   /* 侧边导航栏 */
@@ -123,7 +123,7 @@
     padding: 0px;
     font-size: 2em;
     cursor: pointer;
-    font-family: Bernard;
+    font-family: Bernard, CH;
   }
 
   /* For iphone 5 */

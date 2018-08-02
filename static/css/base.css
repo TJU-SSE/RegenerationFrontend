@@ -8,6 +8,11 @@
   src: url('../../src/assets/fonts/Tw.TTF');
 }
 
+@font-face {
+  font-family: "CH";
+  src: url('../../src/assets/fonts/CH.TTF');
+}
+
 .border{
   border: 2px solid black;
 }

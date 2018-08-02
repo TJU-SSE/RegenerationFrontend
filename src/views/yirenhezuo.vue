@@ -71,17 +71,12 @@
 <style scoped>
 
   @font-face {
-    font-family: 'Bernard';
-    src: url(../assets/fonts/Bernard.ttf);
-  }
-
-  @font-face {
     font-family: 'Tw';
     src: url(../assets/fonts/Tw.ttf);
   }
 
   .main {
-    font-family: 'Tw';
+    font-family: 'Tw', CH;
   }
 
   .imgAbr {

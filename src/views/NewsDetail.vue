@@ -1,9 +1,9 @@
 <template>
   <article class="container news-article" v-if="show" style="font-family: 'Lantinghei SC'">
     <div class="news-main">
-      <h1 class="news-title" style="font-size: 40px; font-family: 'Bernard'">{{news.title}}</h1>
+      <h1 class="news-title" style="font-size: 40px; font-family: 'Bernard', CH">{{news.title}}</h1>
       <div class="news-info">
-        <a class="regen-tag" v-for="tag in news.tag" style="font-family: 'Helvetica Neue'">{{tag.tagTitle}}</a>
+        <a class="regen-tag" v-for="tag in news.tag" style="font-family: 'Helvetica Neue', CH">{{tag.tagTitle}}</a>
         <span class="news-time">{{news.time}}</span>
         <span class="news-author-wrap">
       作者：
@@ -130,7 +130,9 @@
     src:url(../assets/fonts/FZQKBYSJW.ttf);
   }
 
-  
+  .markdown {
+    font-family: bernard, CH
+  }
 
   .news-article{
     padding-top: 20px;
@@ -150,7 +152,7 @@
   }
   .news-article .news-info{
     margin: 20px 0;
-    font-family: Tw;
+    font-family: Tw, CH;
     font-size: 14px;
     letter-spacing: 1.5px;
   }
@@ -160,6 +162,7 @@
   }
   .news-article .news-author-wrap, .news-article .news-time{
     margin: 0 2%;
+    font-family: bernard, CH
   }
   .news-article .news-author{
     text-decoration: none;
@@ -181,7 +184,7 @@
     font-size: 18px;
     text-align: left;
     margin: 10px 10%;
-    font-family: Tw;
+    font-family: Tw, CH;
     letter-spacing: 1.2px;
     /*margin-right: 30%;*/
   }
@@ -189,7 +192,7 @@
   .news-wrap{
     display: flex;
     justify-content: space-between;
-    font-family: Bernard;
+    font-family: Bernard, CH;
     letter-spacing: 1px;
     font-size: 15px;
   }
@@ -207,7 +210,7 @@
     border-top: 2px solid #222222;
     margin-bottom: 20px;
     margin-top: 20px;
-    font-family: Bernard;
+    font-family: Bernard, CH;
     letter-spacing: 2px;
   }
   .arrow{

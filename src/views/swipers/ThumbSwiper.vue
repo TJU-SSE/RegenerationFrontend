@@ -71,7 +71,7 @@
   }
 
   .swiper-container {
-    background-color: #000;
+    background-color: #2c0206;
   }
 
   .swiper-slide {

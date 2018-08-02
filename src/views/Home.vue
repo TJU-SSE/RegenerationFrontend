@@ -50,15 +50,15 @@
           <div v-for="item in news.slice(0, 3)">
             <div>
               <div>
-                <p style="font-family: Bernard; letter-spacing: 2px">{{item.time}}</p>
+                <p style="font-family: Bernard, CH; letter-spacing: 2px">{{item.time}}</p>
                 <!--<p>{{item.writer}}</p>-->
                 <ul>
-                  <li v-for="tag in item.tag" style="font-family: Bernard; letter-spacing: 2px">{{tag.tagTitle}}</li>
+                  <li v-for="tag in item.tag" style="font-family: Bernard, CH; letter-spacing: 2px">{{tag.tagTitle}}</li>
                 </ul>
               </div>
             </div>
             <img style="margin-left: 40px;" :src="item.cover_img" alt="news" @click="toNews(item.newsId)">
-            <h4 style="margin-left: 15px; font-family: Bernard; letter-spacing: 2px">{{item.title}}</h4>
+            <h4 style="margin-left: 15px; font-family: Bernard, CH; letter-spacing: 2px">{{item.title}}</h4>
           </div>
         </div>
         <div class="news-second">
@@ -201,8 +201,8 @@
 <style scoped>
 
   @font-face {
-    font-family: 'DIN Condensed Bold';
-    src: url(../assets/fonts/DINCond-Bold.otf);
+    font-family: 'CH';
+    src: url(../assets/fonts/CH.otf);
   }
 
   /* header */
@@ -314,7 +314,7 @@
     align-items: center;
     position: absolute;
     margin-top: -240px;
-    font-family: Bernard;
+    font-family: Bernard, CH;
     letter-spacing: 2px;
   }
 
@@ -383,7 +383,7 @@
     display: -webkit-flex;
     flex-direction: row;
     align-items: flex-start;
-    font-family: "DIN Condensed Bold";
+    font-family: "CH";
   }
 
   .news-first {
@@ -397,7 +397,7 @@
   }
 
   .news-first li {
-    color: RGBA(34, 194, 221, 1.00);
+    color: #2c3e50;
     margin: 2px;
   }
 
@@ -702,7 +702,7 @@
 
     .sub-header {
       height: 705px;
-      font-family: Bernard;
+      font-family: Bernard, CH;
       letter-spacing: 2px;
     }
 
