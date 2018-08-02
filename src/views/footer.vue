@@ -54,15 +54,16 @@
                       <el-row><p></p></el-row>
                       <el-row>
                         <div class="regname">
-                            <el-col :span="6"><p></p></el-col>
-                            <el-col :span="2"><div class="reddiv">a</div></el-col>
-                            <el-col :span="1"><p></p></el-col>
-                            <el-col :span="2"><div class="greendiv">a</div></el-col>
-                            <el-col :span="1"><p></p></el-col>
-                            <el-col :span="2"><div class="bluediv">a</div></el-col>
-                            <el-col :span="1"><p></p></el-col>
-                            <el-col :span="2"><div class="browndiv">a</div></el-col>
-                            <el-col :span="6"><p></p></el-col>
+                            <el-col :span="5"></el-col>
+                            <el-col :span="14">
+                                <div class="social-icon">
+                                  <img src="../../static/icon/ins.svg" alt="ins" class="icon">
+                                  <img src="../../static/icon/wechat.svg" alt="微信" class="icon">
+                                  <img src="../../static/icon/weibo.svg" alt="新浪微博" class="icon">
+                                  <img src="../../static/icon/qq.svg" alt="QQ" class="icon">
+                                </div>
+                            </el-col>
+                            <el-col :span="5"></el-col>
                         </div>
                       </el-row>
                   </div>
@@ -136,7 +137,7 @@
   .follow{
     background: rgb(53, 1, 1);
     width: 480px;
-    height: 130px;
+    height: 150px;
   }
   .regname{
     display: flex;
@@ -188,5 +189,14 @@
   }
   .reglogo brand {
     font-size: 28px;
+  }
+  .social-icon > img {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  .icon{
+    background-color: aliceblue;
   }
 </style>

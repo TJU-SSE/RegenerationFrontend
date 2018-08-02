@@ -65,10 +65,10 @@
     bottom: 0;
     padding-bottom: 60px;
     width: 100%;
-    color: black;
+    color: rgb(255, 255, 255);
     opacity: 0.7;
-    background: linear-gradient(-70deg, white, gray);
-    background-color: white;
+    background: black;
+    background-color: black;
   }
 
   .text > div {
