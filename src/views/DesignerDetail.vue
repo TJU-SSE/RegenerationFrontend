@@ -154,6 +154,7 @@
     font-size: 5em;
     text-align: center;
     font-family: Bernard;
+    color: black;
   }
 
 
