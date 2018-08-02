@@ -20,7 +20,7 @@
             <el-form-item label="E-mail:" prop="mail">
               <el-input v-model="contactForm.mail"></el-input>
             </el-form-item>
-            <el-form-item label="Content:">
+            <el-form-item label="Leave Your Message Here:">
               <el-input type="textarea" v-model="contactForm.content"></el-input>
             </el-form-item>
           </el-form>
