@@ -209,7 +209,7 @@
   .header {
     height: 300px;
     background: white;
-    color: rgb(255, 255, 255);
+  
   }
 
   .social-icon > img {
@@ -243,7 +243,7 @@
   .navigation > a {
     text-decoration: none;
     font-size: 1.5em;
-    color: white;
+   
     padding: 5px;
     margin: 0 auto;
   }
@@ -252,7 +252,7 @@
     position: absolute;
     right: 4%;
     font-size: 1em;
-    color: white;
+   
   }
 
   .search > img {
@@ -330,7 +330,7 @@
 
   .mag-bg {
     background: white;
-    color: rgb(255, 255, 255);
+   
   }
 
   .mag-photo > div {
@@ -360,7 +360,6 @@
 
   .run-bg {
     background: white;
-    color: rgb(255, 255, 255);
   }
 
   .run-photo > div {
@@ -508,7 +507,7 @@
     right: 0;
     width: 1500px;
     background: white;
-    color: rgb(255, 255, 255);
+  
   }
 
   /* adapt small screen */
