@@ -130,6 +130,16 @@
 </script>
 
 <style scoped>
+  @font-face {
+    font-family: 'Bernard';
+    src: url(../assets/fonts/Bernard.ttf);
+  }
+
+  @font-face {
+    font-family: 'Tw';
+    src: url(../assets/fonts/Tw.ttf);
+  }
+
   /* main container */
   .main-container {
     display: flex;
@@ -166,6 +176,8 @@
   .biography {
     margin-top: 10px;
     width: 80%;
+    font-family: Bernard;
+    letter-spacing: 2px;
   }
 
   .biography p {

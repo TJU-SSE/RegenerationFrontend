@@ -88,7 +88,7 @@
   .list-header {
     margin: 3px 0;
     font-weight: bold;
-    font-family: Bernard;
+    font-family: Tw;
   }
 
   .list-item {
@@ -96,13 +96,14 @@
     letter-spacing: .1em;
     color: #333;
     font-size: 18px;
-    font-family:Tw;
+    font-family: Tw;
   }
 
   a {
     color: black;
     padding-left: 2px;
     text-decoration: none !important;
+    font-family: Tw;
   }
 
   /* 侧边导航栏 */
