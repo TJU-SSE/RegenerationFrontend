@@ -233,7 +233,7 @@
     margin: 0;
     height: 200px;
     background: url('../../static/img/homeheader.jpg') no-repeat;
-    background-size:100%;;
+    background-size:100% 100%;
   }
   .big-title {
     display: flex;

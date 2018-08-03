@@ -1,13 +1,13 @@
 <template>
   <div>
    <div class="header">
-    <div class="social-icon">
+    <!-- <div class="social-icon">
       <img src="../../static/icon/facebook.svg" alt="facebook">
       <img src="../../static/icon/ins.svg" alt="ins">
       <img src="../../static/icon/wechat.svg" alt="微信">
       <img src="../../static/icon/weibo.svg" alt="新浪微博">
       <img src="../../static/icon/qq.svg" alt="QQ">
-    </div>
+    </div> -->
     <div class="big-title">
       <h1>REGENERATION</h1>
     </div>
@@ -176,7 +176,7 @@
     height: 300px;
     /* background: linear-gradient(70deg, white, #433B38 80%, #1E0A02); */
     background: url('../../static/img/homeheader.jpg') no-repeat;
-    background-size:100%;
+    background-size:100% 100%;
   }
   .sub-header {
     background-color: #2a0910;
