@@ -56,7 +56,8 @@
   }
 
   a {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: Tw, CH;
+    font-size: 12pt;
   }
 
   button {
@@ -106,8 +107,10 @@
     width: 100%;
     letter-spacing: .1em;
     color: #333;
-    font-family: "FranklinGothic", Helvetica, sans-serif;
+    font-family: Tw, CH;
+    font-size: 12pt;
     color: #cc141e;
+    margin-top: 0pt;
   }
 
   a {
@@ -131,7 +134,7 @@
   .nav > li {
     padding: 2px;
     cursor: pointer;
-    font-size: 1.5em;
+    font-size: 12pt;
   }
 
   .nav.active {

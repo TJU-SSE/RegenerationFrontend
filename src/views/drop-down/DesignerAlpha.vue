@@ -59,7 +59,7 @@
   }
 
   a {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: Tw, CH;
   }
 
   ul {

@@ -1,7 +1,7 @@
 <template>
   <article class="container news-article" v-if="show" style="font-family: 'Lantinghei SC'">
     <div class="news-main">
-      <h1 class="news-title" style="font-size: 40px; font-family: 'Bernard', CH">{{news.title}}</h1>
+      <h1 class="news-title" style="font-size: 36pt; font-family: 'Bernard', CH">{{news.title}}</h1>
       <div class="news-info">
         <a class="regen-tag" v-for="tag in news.tag" style="font-family: 'Helvetica Neue', CH">{{tag.tagTitle}}</a>
         <span class="news-time">{{news.time}}</span>
@@ -22,7 +22,7 @@
     </div>
 
     <div class="arrow-bar">
-      <span>MORE NEWS</span>
+      <span>MORE FASHION</span>
       <div class="arrow"></div>
     </div>
 
@@ -162,7 +162,8 @@
   }
   .news-article .news-author-wrap, .news-article .news-time{
     margin: 0 2%;
-    font-family: bernard, CH
+    font-family: bernard, CH;
+    font-size: 14pt;
   }
   .news-article .news-author{
     text-decoration: none;
@@ -181,7 +182,7 @@
   }
 
   .news-article .news-content{
-    font-size: 18px;
+    font-size: 18pt;
     text-align: left;
     margin: 10px 10%;
     font-family: Tw, CH;
@@ -212,6 +213,7 @@
     margin-top: 20px;
     font-family: Bernard, CH;
     letter-spacing: 2px;
+    font-size: 30pt;
   }
   .arrow{
     bottom: 4px;

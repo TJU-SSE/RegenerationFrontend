@@ -358,6 +358,10 @@
     cursor: pointer;
   }
 
+  .desc {
+    font-size: 15pt;
+  }
+
   .run-bg {
     background: white;
   }
@@ -499,6 +503,7 @@
 
   .runway {
     height: 490px;
+    margin-top: 200px;
   }
 
   .bg {

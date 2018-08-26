@@ -180,10 +180,11 @@
   }
   .sub-header {
     background-color: #2a0910;
-    height: 60px;
+    height: 100px;
+    padding-top: 12px;
     font-family: 'Tw', CH;
-    font-size: 21px;
-    letter-spacing: 2px;
+    font-size: 21pt;
+    letter-spacing: 4px;
   }
   .social-icon > img {
     padding: 10px;
@@ -201,9 +202,11 @@
 
   .big-title h1 {
     color: #cc141e;
-    font-size: 140px;
+    font-size: 95pt;
     font-family: Tw, CH;
     letter-spacing: 45px;
+    /* height: 90%;
+    width: 120%; */
   }
 
   @media screen {

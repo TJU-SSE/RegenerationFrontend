@@ -43,7 +43,7 @@
   }
 
   a {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: Tw, CH;
   }
 
   button {
@@ -94,7 +94,8 @@
     width: 100%;
     letter-spacing: .1em;
     color: #cc141e;
-    font-family: "FranklinGothic", Helvetica, sans-serif;
+    font-family: Tw, CH;
+    font-size: 9pt;
   }
 
   a {

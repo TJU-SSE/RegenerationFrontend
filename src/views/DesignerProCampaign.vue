@@ -3,8 +3,8 @@
     <div class="biography">
       <h4 style="font-family: Arial; margin-bottom: -10px"><strong>Biography</strong></h4>
       <hr>
-      <p style="font-family: Arial" class="bio-content">{{designer.biography}}<a class="more" @click="showMore" v-if="moreFlag">{{moreText}}</a></p>
-      <h4 style="font-family: Arial; margin-bottom: -10px"><strong>Updates</strong></h4>
+      <p class="bio-content">{{designer.biography}}<a class="more" @click="showMore" v-if="moreFlag">{{moreText}}</a></p>
+      <h4 style="margin-bottom: -10px"><strong>Updates</strong></h4>
       <hr>
     </div>
     <div class="pagination">
@@ -209,6 +209,7 @@
 
   .bio-content {
     font-family: 'Tw', CH !important;
+    font-size: 14pt;
   }
 
   .biography thead > tr > th {

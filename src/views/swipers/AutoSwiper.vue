@@ -73,6 +73,8 @@
 
   .text > div {
     text-align: center;
+    font-size: 18pt;
+    letter-spacing: 4px;
   }
 
   .swiper-button-prev {

@@ -227,7 +227,7 @@
   .big-title {
     margin-top: 20px;
     margin-bottom: 30px;
-    font-size: 5em;
+    font-size: 48pt;
     text-align: center;
     font-family: Bernard, CH;
     letter-spacing: 2px;
@@ -371,6 +371,7 @@
     font-family: Tw, CH;
     font-size: 1.5em;
     font-weight: 900;
+    margin-top: -10pt;
   }
 
   a {

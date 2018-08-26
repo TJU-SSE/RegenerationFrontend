@@ -4,7 +4,7 @@
     <img class="wf-img" :src="imgUrl" :index="index" @click="goToNewsDetail($event,newsId)">
     <p class="wf-title" @click="goToNewsDetail($event,newsId)">{{title}}</p>
     <span class="wf-time">{{time}}</span>
-    <p class="wf-desc">{{writer}}</p>
+    <p class="wf-writer">{{writer}}</p>
   </div>
 
 </template>
@@ -49,7 +49,15 @@
 <style scoped>
 
 .wf-title {
-  font-size: 0.9em;
+  font-size: 14pt;
+}
+
+.wf-time {
+  font-size: 10pt;
+}
+
+.wf-writer {
+  font-size: 10pt;
 }
 
 </style>
