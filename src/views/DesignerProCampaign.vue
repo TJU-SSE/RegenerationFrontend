@@ -3,12 +3,8 @@
     <div class="biography">
       <h4 style="font-family: Arial; margin-bottom: -10px"><strong>Biography</strong></h4>
       <hr>
-      <p class="bio-content">{{designer.biography}}<a class="more" @click="showMore" v-if="moreFlag">{{moreText}}</a></p>
-      <h4 style="margin-bottom: -10px"><strong>Updates</strong></h4>
+      <p class="bio-content">{{designer.biography}}</p>
       <hr>
-    </div>
-    <div class="pagination">
-      <pagination :pageInfo="pageInfo" @clickCurrent="pageChange" class="pagination"></pagination>
     </div>
     <div class="honor-list" v-if="showItems.length !== 0">
       <presentList ref="datas" :items="showItems" :designer="designer"></presentList>
@@ -158,11 +154,6 @@
           this.designer = res.msg
           this.specificBiography = this.designer.biography
           console.log(this.specificBiography.length)
-          if (this.specificBiography.length > 400) {
-            this.moreFlag = true
-            this.moreText = ' 展开'
-            this.designer.biography = this.designer.biography.substring(0, 400)
-          }
           console.log(res)
         }).catch(err => {
           console.log(err)
