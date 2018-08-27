@@ -138,6 +138,7 @@
     width: 100%;
     height: 100%;
     margin-bottom: 200px;
+    font-family: Tw, CH;
   }
 
   /* list */
