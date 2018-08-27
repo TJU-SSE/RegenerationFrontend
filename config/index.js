@@ -35,6 +35,6 @@ module.exports = {
     // just be aware of this issue when enabling this option.
     cssSourceMap: false
   },
-  // baseUrl: 'http://101.132.77.182:4000/'
-  baseUrl: 'http://212.64.17.49:4000/'
+  baseUrl: 'http://101.132.77.182:4000/'
+  // baseUrl: 'http://212.64.17.49:4000/'
 }
