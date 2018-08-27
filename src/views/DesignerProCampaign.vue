@@ -4,6 +4,7 @@
       <h4 style="font-family: Arial; margin-bottom: -10px"><strong>Biography</strong></h4>
       <hr>
       <p class="bio-content">{{designer.biography}}</p>
+      <h4 style="margin-bottom: -10px"><strong>Awards</strong></h4>
       <hr>
     </div>
     <div class="honor-list" v-if="showItems.length !== 0">
@@ -120,15 +121,6 @@
       },
       handlePreview (file) {
         console.log(file)
-      },
-      showMore () {
-        if (this.moreText === ' 展开') {
-          this.moreText = ' 合上'
-          this.designer.biography = this.specificBiography
-        } else {
-          this.moreText = ' 展开'
-          this.designer.biography = this.specificBiography.substring(0, 400)
-        }
       },
       async initData () {
         await getAllCampaign(this.designerId, 0, 5).then(res => {

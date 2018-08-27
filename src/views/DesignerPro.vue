@@ -26,17 +26,17 @@
                 <bioItem :designer="designer"></bioItem>
               </transition>
             </el-tab-pane>
-            <el-tab-pane label="YIRENHEZUO">
+            <el-tab-pane label="PUBLIC RELATIONSHIP">
               <transition name="slide-fade">
                 <yirenhezuo/>
               </transition>
             </el-tab-pane>
-            <el-tab-pane label="KUAIJIEHEZUO">
+            <el-tab-pane label="COLLABORATION">
               <transition name="slide-fade">
                 <outer :designer="designer"></outer>
               </transition>
             </el-tab-pane>
-            <el-tab-pane label="WORK">
+            <el-tab-pane label="COLLECTIONS">
               <transition name="slide-fade">
                 <outlook :designer="designer"></outlook>
               </transition>
