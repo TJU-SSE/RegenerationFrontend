@@ -89,9 +89,6 @@
           i['show'] = false
           let time = new Date(i.releaseTime)
           i['time'] = time.getFullYear() + '-' + (time.getMonth() + 1) + '-' + time.getDate()
-          if (i.description.length > 50) {
-            i.description = i.description.substring(0, 50) + '...'
-          }
         })
         this.itemList = this.items
         this.choose = this.items[0]
