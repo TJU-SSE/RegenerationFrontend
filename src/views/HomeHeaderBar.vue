@@ -194,8 +194,6 @@
   }
 
   .big-title {
-    display: flex;
-    display: -webkit-flex;
     flex-direction: row;
     justify-content: center;
   }
@@ -205,6 +203,7 @@
     font-size: 95pt;
     font-family: Tw, CH;
     letter-spacing: 45px;
+    text-align: center;
     /* height: 90%;
     width: 120%; */
   }
