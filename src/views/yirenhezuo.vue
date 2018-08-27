@@ -1,69 +1,91 @@
 <template>
   <div class="main">
-    <el-collapse v-model="activeNames" @change="handleChange">
+    <el-collapse>
         <el-collapse-item :title="length">
             <div class="imgList">
               <el-row>
-                <el-col :span="4" v-for="o in 15" :key="o" class="imgList"><img :src="corpList[0].abrImg" class="imgAbr"></el-col>
+                <el-col :span="4" v-for="o in brandings" :key="o" class="imgList"><img :src="o.portfolio.img_url" class="imgAbr"></el-col>
               </el-row>
             </div>
         </el-collapse-item>
     </el-collapse>  
 
-    <div>
-    <p class="para">2018</p>
-    <HR class="hr"></HR>
-    <el-row v-for="o in 5" :key="o">
-      <el-col :span="5"><img :src="corpList[0].abrImg" class="imgAbr"></el-col>
-      <el-col :span="19">
-        <h3 class="title">{{corpList[0].title}}</h3>
-        <div class="intro">
-          <p>{{corpList[0].name}}</p>
-          <p>{{corpList[0].published}}</p>
-          <p>{{corpList[0].photographer}}</p>
-        </div>
-      </el-col>
-    </el-row>
-
-    <p class="para">2017</p>
-    <HR class="hr"></HR>
-    <el-row v-for="o in 5" :key="o">
-      <el-col :span="5"><img :src="corpList[1].abrImg" class="imgAbr"></el-col>
-      <el-col :span="19">
-        <h3 class="title">{{corpList[1].title}}</h3>
-        <div class="intro">
-          <p>{{corpList[1].name}}</p>
-          <p>{{corpList[1].published}}</p>
-          <p>{{corpList[1].photographer}}</p>
-        </div>
-      </el-col>
-    </el-row>
+    <div v-for="(year, index) in yearList" :key="index">
+      <p class="para">{{year}}</p>
+      <HR class="hr"></HR>
+      <el-row v-for="o in corpList[year]" :key="o">
+        <el-col :span="5"><img :src="o.image" class="imgAbr"></el-col>
+        <el-col :span="19">
+          <h3 class="title">{{o.title}}</h3>
+          <div class="intro">
+            <p>{{o.time}}</p>
+            <p>{{o.desc}}</p>
+          </div>
+        </el-col>
+      </el-row>
     </div>
   </div>    
 </template>
 
 <script>
+  import {getAllBranding} from '../service/getData'
+
   export default {
     data () {
       return {
-        corpList: [
-          {
-            title: 'BRITISH VOGUE 2018 COVER',
-            name: 'British Vogue (Magazine Cover)',
-            published: 'Feb 2018',
-            photographer: 'Peter Lindbergh',
-            abrImg: '../static/img/logo.png'
-          },
-          {
-            title: 'BRITISH VOGUE 2017 COVER',
-            name: 'British Vogue (Magazine Cover)',
-            published: 'Feb 2017',
-            photographer: 'Peter Lindbergh',
-            abrImg: '../static/img/logo.png'
-          }
-        ],
-        length: 'TYPE ALL (446)'
+        designerId: this.$route.params.designerId,
+        brandings: [],
+        yearList: [],
+        total: 0,
+        corpList: {},
+        length: 'TYPE ALL'
       }
+    },
+    methods: {
+      sortItem (a, b) {
+        return b.releaseTime - a.releaseTime
+      },
+      async initData () {
+        getAllBranding(this.designerId, 0, 5).then(res => {
+          console.log('origin res', res)
+          if (res.code === '0') {
+            this.total = res.msg.total
+            this.brandings = res.msg.brandings
+            this.brandings.sort(this.sortItem)
+            var monthAbr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            this.brandings.forEach(element => {
+              var newDate = new Date()
+              newDate.setTime(element.releaseTime)
+              var year = newDate.getFullYear()
+              if (this.yearList.indexOf(year) === -1) {
+                this.yearList.push(year)
+              }
+              var str = monthAbr[newDate.getMonth()] + ' ' + year
+              element.releaseTime = str
+
+              var item = {}
+              item['title'] = element.title
+              item['desc'] = element.description
+              item['time'] = element.releaseTime
+              item['image'] = element.portfolio.img_url
+              if (this.corpList[year] == null) {
+                this.corpList[year] = [item]
+              } else {
+                this.corpList[year].push(item)
+              }
+            })
+            this.yearList.sort().reverse()
+            console.log('yearList', this.yearList)
+            setTimeout(() => this.$refs.datas.initData(), 200)
+          }
+        }).catch(err => {
+          console.log(err)
+        })
+      }
+    },
+    created () {
+      this.initData()
+      console.log('corpList', this.corpList)
     }
   }
 </script>
