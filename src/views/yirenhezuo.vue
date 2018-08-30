@@ -46,7 +46,7 @@
         return b.releaseTime - a.releaseTime
       },
       async initData () {
-        getAllBranding(this.designerId, 0, 5).then(res => {
+        getAllBranding(this.designerId, 0, 1000).then(res => {
           console.log('origin res', res)
           if (res.code === '0') {
             this.total = res.msg.total

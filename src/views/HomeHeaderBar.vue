@@ -8,9 +8,9 @@
       <img src="../../static/icon/weibo.svg" alt="新浪微博">
       <img src="../../static/icon/qq.svg" alt="QQ">
     </div> -->
-    <div class="big-title">
-      <h1>REGENERATION</h1>
-    </div>
+      <div class="big-title">
+        <h1>REGENERATION</h1>
+      </div>
     </div>
 
     <div class="sub-header">
@@ -177,6 +177,7 @@
     /* background: linear-gradient(70deg, white, #433B38 80%, #1E0A02); */
     background: url('../../static/img/homeheader.jpg') no-repeat;
     background-size:100% 100%;
+    min-width: 1080pt;
   }
   .sub-header {
     background-color: #2a0910;
@@ -185,6 +186,7 @@
     font-family: 'Tw', CH;
     font-size: 21pt;
     letter-spacing: 4px;
+    min-width: 1080pt;
   }
   .social-icon > img {
     padding: 10px;

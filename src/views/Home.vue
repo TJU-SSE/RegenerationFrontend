@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="all">
     <AutoSwiper :imgs="news.slice(0, 4)"></AutoSwiper>
     <div class="magazine" style="height:1200px">
       <div class="sub-header mag-bg">
@@ -205,6 +205,10 @@
     src: url(../assets/fonts/CH.otf);
   }
 
+  .all {
+    min-width: 1080pt;
+  }
+
   /* header */
   .header {
     height: 300px;
@@ -316,6 +320,7 @@
     margin-top: -240px;
     font-family: Bernard, CH;
     letter-spacing: 2px;
+    min-width: 1080pt;
   }
 
   .mag-photo {
@@ -469,8 +474,9 @@
 
 
   .add-img {
-    position: absolute;
     width: 400px !important;
+    margin-top: 150px;
+    margin-left: 110px;
   }
 
   .panel {

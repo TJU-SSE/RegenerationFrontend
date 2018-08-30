@@ -105,6 +105,7 @@
     display: -webkit-flex;
     flex-direction: row;
     justify-content: space-around;
+    min-width: 1080pt;
     /* align-items: center; */
   }
 
