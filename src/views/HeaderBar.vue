@@ -9,9 +9,9 @@
     <el-col :span="12">
     <ul class="header-list">
       <router-link tag="li" :to="{ name: 'Home'}" :active-class="activeClass" exact>HOME</router-link>
-      <router-link tag="li" :to="{ name: 'runway'}" :active-class="activeClass" exact>RUNWAY</router-link>
-      <router-link tag="li" :to="{ name: 'designerHome'}" :active-class="activeClass" exact>DESIGNER</router-link>
-      <router-link tag="li" :to="{ name: 'news'}" :active-class="activeClass" exact>NEWS</router-link>
+      <router-link tag="li" :to="{ name: 'runway'}" :active-class="activeClass">RUNWAY</router-link>
+      <router-link tag="li" :to="{ name: 'designerHome'}" :active-class="activeClass" >DESIGNER</router-link>
+      <router-link tag="li" :to="{ name: 'news'}" :active-class="activeClass" >NEWS</router-link>
       <router-link tag="li" :to="{ name: 'contact'}" :active-class="activeClass" exact>ABOUT US</router-link>
     </ul>
     </el-col>

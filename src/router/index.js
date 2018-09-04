@@ -116,7 +116,7 @@ const router = new Router({
       }
     },
     {
-      path: '/runaway/:showId',
+      path: '/runway/:showId',
       name: 'show',
       components: {
         headerBar: HeaderBar,
@@ -124,7 +124,7 @@ const router = new Router({
       }
     },
     {
-      path: '/design/:designerId',
+      path: '/designer/:designerId',
       name: 'designerPro',
       components: {
         headerBar: HeaderBar,

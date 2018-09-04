@@ -16,9 +16,9 @@
     <div class="sub-header">
      <div class="navigation">
       <router-link to="/Home">HOME</router-link>
-      <router-link :to="{ name: 'runway'}" exact>RUNWAY</router-link>
+      <router-link :to="{ name: 'runway'}">RUNWAY</router-link>
       <router-link :to="{ name: 'designerHome' }">DESIGNER</router-link>
-      <router-link :to="{ name: 'news'}" exact>NEWS</router-link>
+      <router-link :to="{ name: 'news'}">NEWS</router-link>
       <router-link :to="{ name: 'contact'}" exact>ABOUT US</router-link>
       <!-- <div>
         <p class="search-label">Search</p>
