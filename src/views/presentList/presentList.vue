@@ -27,10 +27,10 @@
             </div>
             <div class="side-right">
               <div>
-                <img :src="url.img_url" alt="pic" v-for="(url, index) in item.portfolio.imgs.slice(0, 3)" :key="index">
+                <img :src="url.img_url" alt="pic" v-for="(url, index) in item.portfolio.imgs.slice(0, 2)" :key="index">
               </div>
               <div>
-                <img :src="url.img_url" alt="pic" v-for="(url, index) in item.portfolio.imgs.slice(3, 6)" :key="index">
+                <img :src="url.img_url" alt="pic" v-for="(url, index) in item.portfolio.imgs.slice(2, 4)" :key="index">
               </div>
             </div>
           </div>
@@ -213,6 +213,7 @@
     position: absolute;
     right: -85px;
     width: 400px;
+    height: 2000px;
   }
 
   .side-show {
@@ -304,7 +305,7 @@
 
   .side-right > div > img {
     width: 80px;
-    height: 80px;
+    /* height: 80px; */
     margin: 5px;
   }
 
