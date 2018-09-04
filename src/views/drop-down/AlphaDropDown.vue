@@ -5,7 +5,7 @@
       <li v-for="item in opts">
         <ul id="main-content" :id=item.head>
           <li class="list-item list-header">{{item.head}}</li>
-          <li v-for="show in item.items" class="list-item"><router-link :to="{name: 'designerPro', params: {designerId: show.id}}">{{show.name}}</router-link></li>
+          <li v-for="show in item.items" class="list-item"><router-link :to="{name: 'designerPro', params: {designerId: show.id}}" @click.native="shua">{{show.name}}</router-link></li>
         </ul>
       </li>
     </ul>
@@ -42,6 +42,11 @@
       },
       jump (char) {
         $('#drop').scrollTop($('#' + char).offset().top - $('#drop').offset().top + $('#drop').scrollTop())
+      },
+      shua () {
+        this.$router.go(0)
+        window.location.reload()
+        location.reload()
       }
     }
   }

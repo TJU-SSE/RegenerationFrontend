@@ -5,7 +5,7 @@
       <li v-for="(item, index) in opts" :key="index" v-if="item.head.length > 0">
         <ul>
           <li class="list-item list-header">{{item.head}}</li>
-          <li v-for="(show, index) in item.items" :key="index" class="list-item"><router-link :to="{ name: 'show', params: { showId: show.id }}">{{show.name}}</router-link></li>
+          <li v-for="(show, index) in item.items" :key="index" class="list-item"><router-link :to="{ name: 'show', params: { showId: show.id }}" @click.native="shua">{{show.name}}</router-link></li>
           <hr>
         </ul>
       </li>
@@ -29,6 +29,11 @@
         if (this.dropFlag) {
           this.dropFlag = false
         }
+      },
+      shua () {
+        this.$router.go(0)
+        window.location.reload()
+        location.reload()
       }
     }
   }
