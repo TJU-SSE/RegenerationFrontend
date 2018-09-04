@@ -10,10 +10,7 @@
             <div class="ranking">
             </div>
             <div class="agency" align="left">
-              <p>E-mail:  {{designer.email}}</p>
-              <p>Fax:  {{designer.fax}}</p>
-              <p>Tel:  {{designer.phone}}</p>
-              <p>Link:  {{designer.link}}</p>
+              <p>Weibo:  {{designer.social}}</p>
             </div>
           </div>
         </div>
@@ -126,7 +123,8 @@
           email: '12345@gmail.com',
           fax: '12345678',
           phone: '12345678',
-          link: 'StevenLee.uk'
+          link: 'StevenLee.uk',
+          weibo: ''
         },
         editDialog: false,
         deleteDialog: false
@@ -147,6 +145,7 @@
     mounted () {
       document.title = this.title
       getDesignerById(this.designerId).then(res => {
+        console.log('here')
         console.log(res)
         if (res.code === '0') {
           this.designer = res.msg
@@ -154,6 +153,7 @@
           this.designer.fax = '123456789'
           this.designer.phone = '123456789'
           this.designer.link = 'StevenLee.uk'
+          this.designer.weibo = res.msg.social
         }
       }).catch(err => {
         console.log(err)
