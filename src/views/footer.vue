@@ -66,6 +66,10 @@
                             <el-col :span="5"></el-col>
                         </div>
                       </el-row>
+                      <el-row class="regname2">
+                        <el-col :span="6"></el-col>
+                        <a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备17041605号</a>
+                        </el-row>
                   </div>
                 </el-col>
                 <el-col :span="4"><p> </p></el-col>
@@ -143,6 +147,12 @@
   .regname{
     display: flex;
     flex-direction: row;
+  }
+  .regname2{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-top: 5px;
   }
   .reglogo{
     display: flex;
