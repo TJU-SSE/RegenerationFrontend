@@ -30,3 +30,11 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
+import bowser from 'bowser'
+const b = bowser.getParser(window.navigator.userAgent)
+const device = b.parsedResult.platform.type
+if (device === 'desktop') {
+  location.href = 'http://regeneration.cn/'
+} else {
+  location.href = 'http://mobile.regeneration.cn'
+}
