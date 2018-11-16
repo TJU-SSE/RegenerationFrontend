@@ -13,8 +13,33 @@
     <div v-for="(year, index) in yearList" :key="index">
       <p class="para">{{year}}</p>
       <HR class="hr"></HR>
-      <el-row v-for="o in corpList[year]" :key="o">
-        <el-col :span="5"><img :src="o.image" class="imgAbr"></el-col>
+      <el-row v-for="(o, index) in corpList[year]" :key="o">
+        <el-popover placement="right-start" trigger="hover">
+          <div class="side-title">
+            <h3>{{o.title}}</h3>
+            <p> &nbsp {{o.releaseTime}}</p>
+            <hr>
+          </div>
+          <div class="side-img">
+            <div class="side-left">
+              <img :src="o.portfolio.img_url" alt="pic">
+            </div>
+            <div class="side-right">
+              <div>
+                <img :src="url.img_url" alt="pic" v-for="(url, index) in o.portfolio.imgs.slice(0, 2)" :key="index">
+              </div>
+              <div>
+                <img :src="url.img_url" alt="pic" v-for="(url, index) in o.portfolio.imgs.slice(2, 4)" :key="index">
+              </div>
+            </div>
+          </div>
+          <div class="side-desc">
+            <hr>
+            <p>{{o.description}}</p>
+          </div>
+          <p style="position: relative; right: -300px; color: #1d90e6; cursor: pointer" @click="itemActive(index, year);modalFlag=true">More</p>
+          <el-col :span="5" slot="reference"><img :src="o.image" class="imgAbr"></el-col>
+        </el-popover>
         <el-col :span="19">
           <h3 class="title">{{o.title}}</h3>
           <div class="intro">
@@ -24,6 +49,7 @@
         </el-col>
       </el-row>
     </div>
+
   </div>    
 </template>
 
@@ -38,14 +64,17 @@
         yearList: [],
         total: 0,
         corpList: {},
-        length: 'TYPE ALL'
+        length: 'TYPE ALL',
+        modalFlag: false,
+        choose: {},
+        activeItem: -1
       }
     },
     methods: {
       sortItem (a, b) {
         return b.releaseTime - a.releaseTime
       },
-      async initData () {
+      initData () {
         getAllBranding(this.designerId, 0, 1000).then(res => {
           console.log('origin res', res)
           if (res.code === '0') {
@@ -68,6 +97,7 @@
               item['desc'] = element.description
               item['time'] = element.releaseTime
               item['image'] = element.portfolio.img_url
+              item['portfolio'] = element.portfolio
               if (this.corpList[year] == null) {
                 this.corpList[year] = [item]
               } else {
@@ -81,6 +111,10 @@
         }).catch(err => {
           console.log(err)
         })
+      },
+      itemActive (index, year) {
+        this.choose = this.corpList[year][index]
+        console.log('choose', this.choose)
       }
     },
     created () {
@@ -127,6 +161,69 @@
   .intro {
     margin: 0 0 0px;
     line-height: 5px;
+  }
+
+  .side-title, .side-desc{
+    margin-left: 20px;
+    margin-top: -10px;
+    width: 90%;
+  }
+
+  .side-title h3 {
+    font-size: 0.9em;
+  }
+
+  .side-img {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 270px;
+    margin-left: 10px;
+  }
+
+  .side-left {
+
+  }
+
+  .side-left > img {
+    max-width: 150px;
+    max-height: 150px;
+    margin-left: 10px;
+    margin-top: 6px;
+  }
+
+  .side-right {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-left: 20px;
+    width: 200px;
+    height: 150px;
+  }
+
+  .side-right > div {
+    width: 90px;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+  }
+
+  .side-right > div > img {
+    width: 80px;
+    /* height: 80px; */
+    margin: 5px;
+  }
+
+  .side-right > a {
+    position: absolute;
+    bottom: 100px;
+    right: 10px;
+    margin-top: 10px;
+    font-size: 1.5em;
   }
 
 </style>
