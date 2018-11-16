@@ -33,8 +33,6 @@ new Vue({
 import bowser from 'bowser'
 const b = bowser.getParser(window.navigator.userAgent)
 const device = b.parsedResult.platform.type
-if (device === 'desktop') {
-  location.href = 'http://regeneration.cn/'
-} else {
+if (device === 'mobile' || device === 'pad') {
   location.href = 'http://mobile.regeneration.cn'
 }
