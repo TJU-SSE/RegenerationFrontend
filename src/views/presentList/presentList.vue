@@ -1,7 +1,7 @@
 <template>
   <div class="main-container" @click="activeItem=-1">
       <transition name="slide-fade" v-for="(item, index) in itemList" :key="index">
-        <div :class="['list-item', activeItem === index ? 'active':'']" @mouseover="itemActive(index)"  v-if="item.show">
+        <div :class="['list-item', activeItem === index ? 'active':'']" @mouseover="itemActive(index)" @click="modalFlag=true;activeItem=index" v-if="item.show">
           <div class="item-img">
             <img :src="item.portfolio.img_url" alt="pic" :class="[activeItem === index ? 'active':'']">
           </div>

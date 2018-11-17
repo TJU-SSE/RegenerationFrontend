@@ -38,7 +38,7 @@
             <p>{{o.description}}</p>
           </div>
           <p style="position: relative; right: -300px; color: #1d90e6; cursor: pointer" @click="itemActive(index, year);modalFlag=true">More</p>
-          <el-col :span="5" slot="reference"><img :src="o.image" class="imgAbr"></el-col>
+          <el-col :span="5" slot="reference"><img :src="o.image" class="imgAbr" @click="itemActive(index, year);modalFlag=true"></el-col>
         </el-popover>
         <el-col :span="19">
           <h3 class="title">{{o.title}}</h3>
