@@ -50,6 +50,20 @@
       </el-row>
     </div>
 
+    <el-dialog
+      title="提示"
+      :visible.sync="modalFlag"
+      width="100%">
+      <h4>{{choose.title}}</h4>
+      <div style="overflow-y: auto; height: 100%">
+        <img :src="choose.image" alt="pic" style="width: 100%">
+        <img :src="url.img_url" alt="pic" v-for="(url, index) in corpList[year][index].portfolio.imgs" :key="index" style="width: 100%; margin-top: 5px">
+      </div>
+      <div slot="footer">
+        <Button type="error" size="large" long @click="modalFlag = false">关闭</Button>
+      </div>
+    </el-dialog>
+
   </div>    
 </template>
 
@@ -67,6 +81,8 @@
         length: 'TYPE ALL',
         modalFlag: false,
         choose: {},
+        year: 2016,
+        index: 1,
         activeItem: -1
       }
     },
@@ -114,6 +130,8 @@
       },
       itemActive (index, year) {
         this.choose = this.corpList[year][index]
+        this.year = year
+        this.index = index
         console.log('choose', this.choose)
       }
     },
