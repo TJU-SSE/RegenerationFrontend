@@ -81,7 +81,7 @@
         length: 'TYPE ALL',
         modalFlag: false,
         choose: {},
-        year: 2016,
+        year: 0,
         index: 1,
         activeItem: -1
       }
@@ -102,6 +102,7 @@
               var newDate = new Date()
               newDate.setTime(element.releaseTime)
               var year = newDate.getFullYear()
+              this.year = year
               if (this.yearList.indexOf(year) === -1) {
                 this.yearList.push(year)
               }
@@ -122,6 +123,9 @@
             })
             this.yearList.sort().reverse()
             console.log('yearList', this.yearList)
+            console.log('corpList', this.corpList)
+            console.log('year', this.year)
+            console.log('yeardetail', this.corpList[this.year])
             setTimeout(() => this.$refs.datas.initData(), 200)
           }
         }).catch(err => {
@@ -135,9 +139,8 @@
         console.log('choose', this.choose)
       }
     },
-    created () {
+    async created () {
       this.initData()
-      console.log('corpList', this.corpList)
     }
   }
 </script>
